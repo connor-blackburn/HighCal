@@ -1,7 +1,1 @@
-# Code Institute
-
-Welcome connorblackburn98,
-
-We have preinstalled all of the tools you need to get started.
-
-Happy coding!
+[![Build Status](https://travis-ci.com/connorblackburn98/HighCal.svg?branch=master)](https://travis-ci.com/connorblackburn98/HighCal)
