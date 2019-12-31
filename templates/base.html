@@ -37,7 +37,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="#">Profile</a>
-                    <a class="dropdown-item" href="#">Log Out</a>
+                    <a class="dropdown-item" href="{% url 'logout' %}">Log Out</a>
                     <a class="dropdown-item" href="#">Log in</a>
                     <a class="dropdown-item" href="#">Register</a>
                 </div>
@@ -51,6 +51,15 @@
 
 
     <h1>{% block heading %}{% endblock %}</h1>
+
+    {% if messages %}
+        {% for message in messages %}
+            <hr/>
+            {{ message }}
+            <hr/>
+        {% endfor %}
+    {% endif %}
+
     <p>{% block content %}{% endblock %}</p>
     From Base.html
 
