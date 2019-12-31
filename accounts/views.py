@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
-from accounts.forms import LoginForm
+from accounts.forms import LoginForm, UserRegistrationForm
 
 # Create your views here.
 def index(request):
@@ -36,3 +36,27 @@ def login(request):
     else:
         login_form = LoginForm()
     return render(request, 'login.html', {'login_form': login_form})
+
+def registration(request):
+    ''' registration page ''' 
+    if request.user.is_authenticated:
+        return redirect(reverse('index'))
+
+    if request.method == 'POST':
+        registration_form = UserRegistrationForm(request.POST)
+
+        if registration_form.is_valid():
+            registration_form.save()
+
+            user = auth.authenticate(username=request.POST['username'],
+                                    password=request.POST['password1'])
+            if user:
+                auth.login(user=user, request=request)
+                messages.success(request, 'You have registered')
+            else:
+                messages.error(request, 'Error Occured')
+    else:
+        registration_form = UserRegistrationForm()
+
+    return render(request, 'registration.html', {
+        'registration_form': registration_form})
