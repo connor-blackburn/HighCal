@@ -1,4 +1,6 @@
-{% extends 'base.html' %}}
+{% extends 'base.html' %}
+
+{% load bootstrap_tags %}
 
 {% block title %}Login Page{% endblock %}
 
@@ -7,8 +9,8 @@
 {% block content %}
     <form method="POST">
         {% csrf_token %}
-        {{ login_form }}
-        <button type="submit">Log In</button>
+        {{ login_form | as_bootstrap }}
+        <input class="btn btn-primary" type="submit" value="Log In">
     </form>
 
     <p>Forgotten Password? <a href='{% url 'password_reset' %}'>Reset It Here</a></p>
