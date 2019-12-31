@@ -34,12 +34,12 @@ form {
     margin: 0 auto;
  }
 
- .author_img {
+ #blog .author_img {
     margin-top: 25%;
     display: block;
 }
 
-.img-circle{
+#blog .img-circle{
     width:150px;
     height: 150px; 
 }
@@ -51,4 +51,28 @@ form {
     object-fit: cover;
     max-height: 300px;
     max-width: 700px;
-} 
+}
+/* ----------------------------------------------------------------------------------------
+                                 5. Blog Post Expand Page
+ --------------------------------------------------------------------------------------- */
+#blog_detail {
+    padding: 3%;
+    font-family: 'Montserrat';
+}
+
+#blog_detail h1 {
+    font-size: 4em;
+}
+
+#blog_detail .img-circle {
+    width:150px;
+    height: 150px; 
+}
+
+#blog_detail .img-author_img {
+    display: block;
+}
+
+#blog_detail .img-fluid {
+    margin: 3%;
+}
