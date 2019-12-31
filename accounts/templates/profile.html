@@ -1,0 +1,11 @@
+{% extends 'base.html' %}}
+
+{% block title %}{{ user }}'s profile{% endblock %}
+
+{% block heading %}This is your profile page{% endblock %}
+
+{% block content %}
+<h4>Hello, {{ user }}.</h4>
+</br>
+<p>Your email is: <strong>{{ profile.email }}</strong>.</p>
+{% endblock %}

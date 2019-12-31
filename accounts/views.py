@@ -1,12 +1,18 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from accounts.forms import LoginForm, UserRegistrationForm
 
 # Create your views here.
 def index(request):
     ''' Renders "index.html" '''
     return render(request, "index.html")
+
+def user_profile(request):
+    ''' renders users profile page '''
+    user = User.objects.get(email=request.user.email)
+    return render(request, 'profile.html', {'profile': user})
 
 @login_required
 def logout(request):
