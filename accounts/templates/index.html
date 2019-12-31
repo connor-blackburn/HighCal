@@ -1,4 +1,34 @@
 {% extends 'base.html' %}
 {% block title %}Index Page{% endblock %}
 {% block heading %}This is the index page{% endblock %}
-{% block content %}{% endblock %}
+{% block head_js %}
+{% endblock %}
+
+
+{% block content %}
+    <h3>We Develop:</h3>
+    <h1><div id="app"></div></h1>      
+
+  
+  
+  <!--JavaScript Section-->
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script type='text/javascript'>
+        var app = document.getElementById('app');
+        var typewriter = new Typewriter(app, {
+            loop: true
+        });
+        typewriter.typeString('Websites')
+            .pauseFor(200)
+            .deleteAll()
+            .typeString('Apps')
+            .pauseFor(200)
+            .deleteAll()
+            .typeString('Sales Funnels')
+            .pauseFor(200)
+            .deleteAll()
+            .typeString('Landing Pages')
+            .start();
+</script>
+<!---->
+  {% endblock %}
