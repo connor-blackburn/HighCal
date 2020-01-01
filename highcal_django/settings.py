@@ -14,6 +14,7 @@ import os
 from os import path
 if path.exists("env.py"):
     import env
+
 import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -29,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ.get('gitpod_host'), 'highcal-django.herokuapp.com']
+ALLOWED_HOSTS = [os.environ.get('GITPOD_HOST'), 'highcal-django.herokuapp.com']
 
 
 # Application definition
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     'accounts',
     'posts',
     'products',
+    'cart'
 ]
 
 MIDDLEWARE = [
@@ -74,6 +76,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
+                'cart.contexts.cart_contents'
             ],
         },
     },
