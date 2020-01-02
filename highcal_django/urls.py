@@ -20,7 +20,8 @@ from accounts import urls as accounts_urls
 from products import urls as urls_products
 from products.views import all_products
 from cart import urls as urls_cart
-from search import urls as urls_search
+from search_product import urls as urls_search_product
+from search_blog import urls as urls_search_blog
 from checkout import urls as urls_checkout
 from django.views.generic import RedirectView
 from django.views.static import serve
@@ -33,7 +34,8 @@ urlpatterns = [
     url(r'^products/', include(urls_products)),
     url(r'^cart/', include(urls_cart)),
     url(r'^checkout/', include(urls_checkout)),
-    url(r'^search/', include(urls_search)),
+    url(r'^search_product/', include(urls_search_product)),
+    url(r'^search_blog/', include(urls_search_blog)),
     url(r'^$', RedirectView.as_view(url='posts/')),
     url(r'^posts/', include('posts.urls')),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT})
