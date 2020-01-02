@@ -4,7 +4,6 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
     overflow-x: hidden;
 }
 /* ----------------------------------------------------------------------------------------
@@ -13,6 +12,7 @@ body, html {
 
 nav {
     font-family: 'Montserrat';
+    margin-bottom: -20px;
 }
 /* ----------------------------------------------------------------------------------------
                                  3. Form Styling
@@ -87,4 +87,121 @@ form {
     margin: 0 auto;
  }
 
- 
+/* ----------------------------------------------------------------------------------------
+                                 6. Index Page
+ --------------------------------------------------------------------------------------- */
+#index {
+    font-family: 'Montserrat';
+}
+
+.hero_image {
+    position: relative;
+    left: 55%;
+    bottom: 120%;
+}
+
+.hero_image img {
+    height: 600px;
+    width: 600px;
+}
+
+.hero_section {
+    padding: 3%;
+    background-image: linear-gradient(to bottom, #f8f9fa, #d8f1ff, #adecff, #76e7fb, #12e2eb);
+    height: 40vh;
+    }
+
+.hero_section h1 {
+    font-size: 5.5em;
+    line-height: 1.5;
+}
+
+.hero_section h3 {
+    font-size: 2.75em;
+}
+
+/* ----------------------------------------------------------------------------------------
+                                 7. Why Us Section / Index.html
+ --------------------------------------------------------------------------------------- */
+
+.why_us {
+    padding: 3%;
+    height: 50vh;
+}
+
+.why_icons {
+    padding: 5%;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.why_us i {
+    font-size: 7em;
+    color: #a39291;
+}
+
+/* ----------------------------------------------------------------------------------------
+                                 8. Portfolio Section / Index.html
+ --------------------------------------------------------------------------------------- */
+
+ #portfolio {
+    background-color: #ececec;
+    padding: 3%;
+    -webkit-clip-path: polygon(50% 6%, 100% 0, 100% 100%, 0 100%, 0 0);
+    clip-path: polygon(50% 6%, 100% 0, 100% 100%, 0 100%, 0 0);
+ }
+
+#portfolio .row {
+    padding-top: 2%;
+}
+
+.container {
+    position: relative;
+    width: 33.333%;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 7px 13px 0 rgba(48, 55, 75, 0.07);
+    padding: 7px;
+    margin: 4px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-image: linear-gradient(
+    to bottom, #7baaf2, #5792fa, 
+    #3d77fd, #3a58fb, #4e2cf2
+    );
+}
+
+.container:hover .overlay {
+  opacity: .9;
+}
+
+.text {
+  color: white;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 2.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}

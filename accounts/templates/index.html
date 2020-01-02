@@ -1,13 +1,105 @@
 {% extends 'base.html' %}
-{% block title %}Index Page{% endblock %}
-{% block heading %}This is the index page{% endblock %}
-{% block head_js %}
-{% endblock %}
 
+{% block title %}Index Page{% endblock %}
 
 {% block content %}
-    <h3>We Develop:</h3>
-    <h1><div id="app"></div></h1>      
+<div id="index">
+    <!--hero Section-->
+    <div class="hero_section container-fluid">
+        <div class="heading">
+            <h3>We Develop:</h3>
+            <h1><div id="app"></div> </h1>  
+        </div>
+        <button type="button" class="btn btn-light">Learn More</button>
+        <div class="hero_image">
+            <img src="static/images/index_graphic.png" alt="hero image">
+        </div>
+    </div>
+    <div class="wave_svg">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#12E2EB" fill-opacity="1" d="M0,128L40,117.3C80,107,160,85,240,74.7C320,64,400,64,480,90.7C560,117,640,171,720,181.3C800,192,880,160,960,154.7C1040,149,1120,171,1200,154.7C1280,139,1360,85,1400,58.7L1440,32L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+        </svg>
+    </div>
+    <!---->
+    <!-- Why Us Section-->
+    <div class="why_us container-fluid">
+        <h2>Why Us?</h2>
+        <div class="row why_icons">
+            <div class="bolt_icon col">
+                <i class="fas fa-bolt"></i>
+                <p>Fast Delivery</p>
+            </div>
+            <div class="suit_icon col">
+                <i class="fas fa-user-tie"></i>
+                <p>Professional Service</p>
+            </div>
+            <div class="handshake_icon col">
+                <i class="fas fa-handshake"></i>
+                <p>Reliable Products</p>
+            </div>
+        </div>
+    </div>
+    <!-- -->
+    <!-- Portfolio Section-->
+    <div id='portfolio' class="container-fluid">
+        <div class="header">
+            <h2>Portfolio</h2>
+        </div>
+        <div class="row">
+            <div class="container col">
+                <img src="https://dummyimage.com/600x400/999399/050505" alt="Avatar" class="image">
+                <div class="overlay">
+                    <div class="text">
+                         <p>Lorem Ipsum</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container col">
+                <img src="https://dummyimage.com/600x400/999399/050505" alt="Avatar" class="image">
+                <div class="overlay">
+                    <div class="text">
+                        <p>Lorem Ipsum</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container col">
+                <img src="https://dummyimage.com/600x400/999399/050505" alt="Avatar" class="image">
+                 <div class="overlay">
+                    <div class="text">
+                        <p>Lorem Ipsum</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container col">
+                <img src="https://dummyimage.com/600x400/999399/050505" alt="Avatar" class="image">
+                <div class="overlay">
+                    <div class="text">
+                        <p>Lorem Ipsum</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container col">
+                <img src="https://dummyimage.com/600x400/999399/050505" alt="Avatar" class="image">
+                <div class="overlay">
+                    <div class="text">
+                        <p>Lorem Ipsum</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container col">
+                 <img src="https://dummyimage.com/600x400/999399/050505" alt="Avatar" class="image">
+                 <div class="overlay">
+                     <div class="text">
+                         <p>Lorem Ipsum</p>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- --> 
 
   
   
