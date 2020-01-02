@@ -5,10 +5,13 @@
             <h2>Blog</h2>
             <hr/>
         </div>
-        <form class="form-inline" action="{% url 'search_blog' %}" method='GET'>
-            <input class="form-control mr-sm-2" name='q' type="text" placeholder="Search Blogposts" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        <div class="blog_search">
+            <form class="form-inline" action="{% url 'search_blog' %}" method='GET'>
+                <input class="form-control mr-sm-2" name='q' type="text" placeholder="Search Blogposts" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+        <br/>
         {% for post in posts %}
             <div class="row">
                 <div class="author_body col-md-2 text-center">
