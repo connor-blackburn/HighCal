@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<div id="portfolio_page">
+    <div class="heading">
+        <h2>Portfolio</h2>
+        <hr/>
+    </div>
+    <br/>
+    {% for portfolio in portfolios %}
+    <div class="row">
+        <div class="col-md-10 ">
+            <h1>{{ portfolio.title }}</h1>
+            <img class="img-fluid" src="/media/{{ portfolio.image }}">
+            <div class="col-xs-9">
+                <br/>
+                <a href="{{ portfolio.link }}" target="_blank""><button type="button" class="btn btn-success col-12">View Site!</button></a>
+            </div>
+        </div>
+    </div><hr/>
+    {% endfor %}
+</div>
+{% endblock %}
+

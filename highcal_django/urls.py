@@ -19,6 +19,8 @@ from accounts.views import index
 from accounts import urls as accounts_urls
 from products import urls as urls_products
 from products.views import all_products
+from portfolio.views import all_portfolio
+from portfolio import urls as urls_portfolio
 from cart import urls as urls_cart
 from search_product import urls as urls_search_product
 from search_blog import urls as urls_search_blog
@@ -32,6 +34,7 @@ urlpatterns = [
     url(r'^$', index, name='index'),
     url(r'^accounts/', include(accounts_urls)),
     url(r'^products/', include(urls_products)),
+    url(r'^portfolio/', include(urls_portfolio)),
     url(r'^cart/', include(urls_cart)),
     url(r'^checkout/', include(urls_checkout)),
     url(r'^search_product/', include(urls_search_product)),
