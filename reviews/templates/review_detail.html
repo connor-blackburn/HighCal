@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<div id="review_detail">
+        <div class="heading">
+            <h2>{{ review.job_title }}</h2>
+            <hr/>
+        <div class="review_detail_content text-center">
+            {% if review.image %}
+                <img class="img-fluid" src="/media/{{ review.image }}">
+            {% endif %}
+            <br>
+            <h2>{{ review.review_title }}</h2>
+            <br/>
+            <h5>{{ review.description }}</h5>
+            <p>Published on: {{ review.published_date }}</p>
+        </div>
+        <div class="review_votes text-center">
+                <form class='text-center col-12' method="post" action="{% url 'upvotes' review.id %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn btn-success">
+                        Votes <span class="badge badge-light">{{ review.upvotes }}</span>
+                    </button>
+                </form>
+         </div>
+         <hr>
+    <p><a href="{% url 'get_reviews' %}"  class="btn btn-success">Return To Reviews</a></p>
+</div>
+{% endblock %} 

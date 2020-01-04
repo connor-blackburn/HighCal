@@ -24,6 +24,8 @@ from portfolio import urls as urls_portfolio
 from cart import urls as urls_cart
 from search_product import urls as urls_search_product
 from search_blog import urls as urls_search_blog
+from reviews import urls as urls_reviews
+from reviews.views import all_reviews
 from checkout import urls as urls_checkout
 from django.views.generic import RedirectView
 from django.views.static import serve
@@ -35,6 +37,9 @@ urlpatterns = [
     url(r'^accounts/', include(accounts_urls)),
     url(r'^products/', include(urls_products)),
     url(r'^portfolio/', include(urls_portfolio)),
+    url(r'^reviews/', include('reviews.urls')),
+    url(r'^reviews/', include(urls_reviews)),
+    url(r"^reviews$", all_reviews, name="all_reviews"),
     url(r'^cart/', include(urls_cart)),
     url(r'^checkout/', include(urls_checkout)),
     url(r'^search_product/', include(urls_search_product)),

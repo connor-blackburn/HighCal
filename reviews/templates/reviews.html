@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div id="reviews">
+        <div class="heading">
+            <h2>Reviews</h2>
+            <hr/>
+        </div>
+        <div class="row">
+            <div class="dropdown col-12">
+                <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Filter Client Reviews
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a name="asc_votes" href="?asc_votes=1" class="dropdown-item">Highest votes</a>
+                    <a name="dsc_votes" href="?dsc_votes=1" class="dropdown-item">Lowest votes</a>
+                    <a name="First_added" href="?first_added=1" class="dropdown-item">Oldest</a>
+                    <a name="Last_added" href="?last_added=1" class="dropdown-item">Latest</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for review in reviews %}
+            <div class="card text-center">
+                <div class="card-header">
+                    {{ review.job_title }}
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ review.review_title }}</h5>
+                    <p class="card-text">{{ review.description|truncatewords:5}}</p>
+                    <p class="card-text">votes: {{ review.upvotes}}</p>
+                    <a href="{% url 'review_detail' review.id %}" class="btn btn-success">Read Full</a>
+                </div>
+                <div class="card-footer text-muted">
+                    Published on: {{ review.published_date }}
+                </div>
+            </div>
+             {% endfor %}
+        </div>
+            <a href="{% url 'new_review' %}" class="btn btn-success" >Add New Review</a>
+            </div>
+        
+    </div>
+{% endblock %}

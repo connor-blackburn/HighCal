@@ -216,3 +216,54 @@ form {
     width: 80%;
     margin: 0 auto;
  }
+
+ /* ----------------------------------------------------------------------------------------
+                                 10. Review Page
+ --------------------------------------------------------------------------------------- */
+
+#reviews {
+    font-family: 'Montserrat';
+    padding: 3%;
+    width: 80%;
+    margin: 0 auto;
+ }
+
+ #reviews .card {
+     margin: 2% 1%;
+ }
+
+  /* ----------------------------------------------------------------------------------------
+                                 11. Review Form Page
+ --------------------------------------------------------------------------------------- */
+
+ #review_form {
+    font-family: 'Montserrat';
+    padding: 3%;
+    width: 80%;
+    margin: 0 auto;
+ }
+
+ /* ----------------------------------------------------------------------------------------
+                                 11. Review Detail Page
+ --------------------------------------------------------------------------------------- */
+
+ #review_detail {
+    font-family: 'Montserrat';
+    padding: 3%;
+    width: 80%;
+    margin: 0 auto;
+ }
+
+ #review_detail form {
+     text-align: center;
+ }
+
+ #review_detail img {
+     border: 1px solid black;
+     width: 80%;
+     margin-bottom: 2%;
+ }
+
+ #review_detail .review_votes {
+     margin: 0 auto;
+ }
