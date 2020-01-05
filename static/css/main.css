@@ -475,6 +475,38 @@ form {
         font-size: 2.15em;
     }
 }
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .hero_section {
+        text-align: center;
+        padding: 3%;
+        background-image: linear-gradient(to bottom, #f8f9fa, #d8f1ff, #adecff, #76e7fb, #12e2eb);
+        height: 60vh;
+        }
+
+     .hero_image {
+        position: relative;
+        right: 20%;
+        bottom: 5%;
+        top: 13%;
+        left: 2%;
+    }
+
+    .hero_image img {
+        height: 330px;
+        width: 330px;
+    }
+    .hero_section h1 {
+        font-size: 4.3em;
+        line-height: 2;
+    }
+
+    .hero_section h3 {
+        font-size: 2.15em;
+    }
+}
+
+
  /* ----------------------------------------------------------------------------------------
                                  2. Why Us Section /Index.html
  --------------------------------------------------------------------------------------- */
@@ -507,6 +539,18 @@ form {
         font-size: 6em;
     }
 }
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .why_us i {
+        font-size: 6em;
+    }
+}
+
+@media (min-width: 1441px) {
+   .why_us i {
+        font-size: 6em;
+    } 
+}
  /* ----------------------------------------------------------------------------------------
                                  2. Portfolio Section /Index.html
  --------------------------------------------------------------------------------------- */
@@ -537,6 +581,7 @@ form {
         margin: 2% auto;
     }
 }
+
  /* ----------------------------------------------------------------------------------------
                                  3. Blog Section /Index.html
  --------------------------------------------------------------------------------------- */
@@ -568,5 +613,11 @@ form {
 @media (min-width: 769px) and (max-width: 1024px) {
     #blog_section {
         height: 130vh;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+       #blog_section {
+        height: 100vh;
     }
 }
