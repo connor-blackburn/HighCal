@@ -123,10 +123,11 @@ form {
 /* ----------------------------------------------------------------------------------------
                                  7. Why Us Section / Index.html
  --------------------------------------------------------------------------------------- */
-
-.why_us {
+#why_us {
+    font-family: 'Montserrat';
     padding: 3%;
-    height: 50vh;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .why_icons {
@@ -137,75 +138,37 @@ form {
 }
 
 .why_us i {
-    font-size: 7em;
+    margin: 10px;
+    font-size: 13em;
     color: #a39291;
 }
 
 /* ----------------------------------------------------------------------------------------
                                  8. Portfolio Section / Index.html
  --------------------------------------------------------------------------------------- */
-
- #portfolio {
-    background-color: #ececec;
+ #portfolio_index {
+    background-image: linear-gradient(to bottom, #711cff, #7127fd, #712ffb, #7237f9, #723df7, #794af6, #8056f4, #8761f2, #9474f0, #a187ee, #ae99eb, #baabe7);
     padding: 3%;
     -webkit-clip-path: polygon(50% 6%, 100% 0, 100% 100%, 0 100%, 0 0);
     clip-path: polygon(50% 6%, 100% 0, 100% 100%, 0 100%, 0 0);
  }
 
-#portfolio .row {
-    padding-top: 2%;
+#portfolio_index hr {
+    background-color: #fff;
 }
 
-.container {
-    position: relative;
-    width: 33.333%;
-    border-radius: 5px;
-    background-color: #ffffff;
-    box-shadow: 0 7px 13px 0 rgba(48, 55, 75, 0.07);
-    padding: 7px;
-    margin: 4px;
+#portfolio_index .header {
+    color: #fff;
 }
 
-.image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
+ #portfolio_index .row {
+     padding: 5%;
+ }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-image: linear-gradient(
-    to bottom, #7baaf2, #5792fa, 
-    #3d77fd, #3a58fb, #4e2cf2
-    );
+.portfolio_index_container {
+    width: 80%;
+    margin: 0 auto;
 }
-
-.container:hover .overlay {
-  opacity: .9;
-}
-
-.text {
-  color: white;
-  font-family: 'Montserrat';
-  font-weight: bold;
-  font-size: 2.5em;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
 /* ----------------------------------------------------------------------------------------
                                  9. Portfolio Page
  --------------------------------------------------------------------------------------- */
@@ -215,7 +178,12 @@ form {
     padding: 3%;
     width: 80%;
     margin: 0 auto;
- }
+}
+
+
+#portfolio_page .portfolio_image {
+    margin: 5px;
+}
 
  /* ----------------------------------------------------------------------------------------
                                  10. Review Page
@@ -267,3 +235,55 @@ form {
  #review_detail .review_votes {
      margin: 0 auto;
  }
+
+ /* ----------------------------------------------------------------------------------------
+                                 12. Merchandise Section / Index.html
+ --------------------------------------------------------------------------------------- */
+
+ #merchandise_section {
+    font-family: 'Montserrat';
+    padding: 3%;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+ }
+ 
+ #merchandise_section .card {
+    margin: 5% auto;
+ }
+
+/* ----------------------------------------------------------------------------------------
+                                 13. Blog Section / Index.html
+ --------------------------------------------------------------------------------------- */
+
+#blog_section {
+    font-family: 'Montserrat';
+    padding: 3%;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    background-color: #8e8e8e;
+}
+
+#blog_section hr {
+    background-color: #fff;
+}
+
+#blog_section .header {
+    color: #fff;
+}
+
+#blog_section .card {
+    margin: 0 auto;
+}
+
+#blog_section .card img {
+    object-fit: cover;
+    max-height: 250px;
+    max-width: 700px;
+}
+
+#blog_section a {
+    color: #fff;
+}  

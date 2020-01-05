@@ -10,7 +10,7 @@
             <h3>We Develop:</h3>
             <h1><div id="app"></div> </h1>  
         </div>
-        <button type="button" class="btn btn-light">Learn More</button>
+        <a href="#why_us"><button type="button" class="btn btn-light">Learn More</button></a>
         <div class="hero_image">
             <img src="static/images/index_graphic.png" alt="hero image">
         </div>
@@ -22,86 +22,107 @@
     </div>
     <!---->
     <!-- Why Us Section-->
-    <div class="why_us container-fluid">
-        <h2>Why Us?</h2>
-        <div class="row why_icons">
-            <div class="bolt_icon col">
-                <i class="fas fa-bolt"></i>
-                <p>Fast Delivery</p>
-            </div>
-            <div class="suit_icon col">
-                <i class="fas fa-user-tie"></i>
-                <p>Professional Service</p>
-            </div>
-            <div class="handshake_icon col">
-                <i class="fas fa-handshake"></i>
-                <p>Reliable Products</p>
+    <div id="why_us">
+        <div class="why_us container-fluid text-center">
+        <div class="header">
+            <h2>Why Us?</h2>
+        </div>
+        <hr>
+            <div class="row why_icons">
+                <div class="bolt_icon col-4">
+                    <i class="fas fa-bolt"></i>
+                    <p>Fast Delivery</p>
+                </div>
+                <div class="suit_icon col-4">
+                    <i class="fas fa-user-tie"></i>
+                    <p>Professional Service</p>
+                </div>
+                <div class="handshake_icon col-4">
+                    <i class="fas fa-handshake"></i>
+                    <p>Reliable Products</p>
+                </div>
             </div>
         </div>
     </div>
     <!-- -->
     <!-- Portfolio Section-->
-    <div id='portfolio' class="container-fluid">
-        <div class="header">
-            <h2>Portfolio</h2>
-        </div>
-        <div class="row">
-            <div class="container col">
-                <img src="https://dummyimage.com/600x400/999399/050505" alt="Avatar" class="image">
-                <div class="overlay">
-                    <div class="text">
-                         <p>Lorem Ipsum</p>
-                    </div>
-                </div>
+    <div id='portfolio_index' class="text-center">
+        <div class="portfolio_index_container">
+            <div class="header">
+                <h2>Portfolio</h2>
+                <p>View Our Previous Work</p>
             </div>
-            <div class="container col">
-                <img src="https://dummyimage.com/600x400/999399/050505" alt="Avatar" class="image">
-                <div class="overlay">
-                    <div class="text">
-                        <p>Lorem Ipsum</p>
-                    </div>
+            <hr>
+            <div class="row">
+                {% for portfolio in portfolios|slice:":2" %}
+                <div class="col-6">
+                    <img class='img-thumbnail portfolio_image' src="/media/{{ portfolio.image }}" alt="">
                 </div>
+                {% endfor %}
             </div>
-            <div class="container col">
-                <img src="https://dummyimage.com/600x400/999399/050505" alt="Avatar" class="image">
-                 <div class="overlay">
-                    <div class="text">
-                        <p>Lorem Ipsum</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="container col">
-                <img src="https://dummyimage.com/600x400/999399/050505" alt="Avatar" class="image">
-                <div class="overlay">
-                    <div class="text">
-                        <p>Lorem Ipsum</p>
-                    </div>
-                </div>
-            </div>
-            <div class="container col">
-                <img src="https://dummyimage.com/600x400/999399/050505" alt="Avatar" class="image">
-                <div class="overlay">
-                    <div class="text">
-                        <p>Lorem Ipsum</p>
-                    </div>
-                </div>
-            </div>
-            <div class="container col">
-                 <img src="https://dummyimage.com/600x400/999399/050505" alt="Avatar" class="image">
-                 <div class="overlay">
-                     <div class="text">
-                         <p>Lorem Ipsum</p>
-                     </div>
-                </div>
-            </div>
+            <br>
+            <a href="{% url 'portfolios' %}"><button type="button" class="btn btn-success col-4">Visit Full Portfolio</button></a>
         </div>
     </div>
-</div>
-<!-- --> 
-
-  
+    <!-- --> 
+    <!-- Merchandise Section-->
+    <div id="merchandise_section">
+        <div class="merchandise_index_container container">
+            <div class="header">
+                <h2>Merchandise</h2>
+                <p>Show Your Support And View Our Merchandie Store!</p>
+            </div>
+            <hr>
+            <div class="row">
+            {% for product in products|slice:":2" %}
+                <div class="card text-center" style="width: 18rem;">
+                <img class="card-img-top" src="/media/{{ product.image }}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">{{ product.description }}</p>
+                    <p class="card-text">£ {{ product.price }}</p>
+                    <form method="post" class="col-12" action="{% url 'add_to_cart' product.id %}">
+                        {% csrf_token %}
+                        <div class="input-group">
+                            <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Qty">
+                            <span class="input-group-btn">
+                                <button class="btn btn-success" type="submit">Add</button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            {% endfor %}
+            </div>
+            <a href="{% url 'products' %}"><button type="button" class="btn btn-success col-4">Visit Store</button></a>
+        </div>
+    </div>
+    <!---->
+    <!--Blog Section-->
+    <div id="blog_section">
+        <div class="blog_index_container container">
+            <div class="header">
+                <h2>Blog</h2>
+                <p>View Our Full Blog Sections For Recent News + Tips!</p>
+            </div>
+            <hr>
+            <div class="row">
+                {% for post in posts|slice:":1" %}
+                    <div class="card mb-3">
+                        <img class="card-img-top" src="/media/{{ post.image }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ post.title }}</h5>
+                            <p class="card-text">{{ post.content|truncatewords:10 }}</p>
+                            <p><a href="{% url 'post_detail' post.id %}"  class="btn btn-success">Read Full Post</a></p>
+                            <p class="card-text"><small class="text-muted">Published on: {{ post.published_date }}</small></p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <a href="{% url 'get_posts' %}"><button type="button" class="btn btn-success col-4">View Blog</button></a>
+        </div>
+    </div>
+    <!---->
   
   <!--JavaScript Section-->
   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>

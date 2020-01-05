@@ -6,18 +6,13 @@
         <hr/>
     </div>
     <br/>
-    {% for portfolio in portfolios %}
     <div class="row">
-        <div class="col-md-10 ">
-            <h1>{{ portfolio.title }}</h1>
-            <img class="img-fluid" src="/media/{{ portfolio.image }}">
-            <div class="col-xs-9">
-                <br/>
-                <a href="{{ portfolio.link }}" target="_blank""><button type="button" class="btn btn-success col-12">View Site!</button></a>
-            </div>
+        {% for portfolio in portfolios %}
+        <div class="col-6">
+            <img class='img-thumbnail portfolio_image' src="/media/{{ portfolio.image }}" alt="">
         </div>
-    </div><hr/>
-    {% endfor %}
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}
 

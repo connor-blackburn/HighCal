@@ -3,11 +3,17 @@ from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from accounts.forms import LoginForm, UserRegistrationForm
+from portfolio.models import Portfolio
+from products.models import Product
+from posts.models import Post
 
 # Create your views here.
 def index(request):
     ''' Renders "index.html" '''
-    return render(request, "index.html")
+    portfolios = Portfolio.objects.all()
+    products = Product.objects.all()
+    posts = Post.objects.all()
+    return render(request, "index.html", {"portfolios": portfolios, "products": products, "posts": posts})
 
 def user_profile(request):
     ''' renders users profile page '''
