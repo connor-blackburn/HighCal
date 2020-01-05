@@ -4,13 +4,17 @@
 
 {% block title %}Registration Page{% endblock %}
 
-{% block heading %}This is the Registration page{% endblock %}
-
 {% block content %}
-    <p>Already have an account? <a href='{% url 'login' %}'>Log in here.</a></p>
-    <form method="POST">
-        {% csrf_token %}
-        {{ registration_form | as_bootstrap}}
-        <input class="btn btn-primary" type="submit" value="Register">
-    </form>
+    <div id="reg_page">
+        <div class="header">
+            <h2>Registration Page</h2>
+        </div>
+        <hr>
+        <p>Already have an account? <a href='{% url 'login' %}'>Log in here.</a></p>
+        <form method="POST">
+            {% csrf_token %}
+            {{ registration_form | as_bootstrap}}
+            <input class="btn btn-primary" type="submit" value="Register">
+        </form>
+    </div>
 {% endblock %}

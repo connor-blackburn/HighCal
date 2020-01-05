@@ -3,6 +3,7 @@
 <div id="shop">
     <div class="heading">
         <h2>Shop</h2>
+        <p>Please Log In To Add Items To Cart!</p>
         <hr/>
     </div>
     <div class="product_Search">
@@ -20,7 +21,8 @@
                     <h5 class="card-title">{{ product.name }}</h5>
                     <p class="card-text">{{ product.description }}</p>
                     <p class="card-text">£ {{ product.price }}</p>
-                    <form method="post" action="{% url 'add_to_cart' product.id %}">
+                    {% if user.is_authenticated %}
+                    <form method="post" class="col-12" action="{% url 'add_to_cart' product.id %}">
                         {% csrf_token %}
                         <div class="input-group">
                             <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Qty">
@@ -29,6 +31,8 @@
                             </span>
                         </div>
                     </form>
+                    {% else %}
+                    {% endif %}
                 </div>
             </div>
         {% endfor %}

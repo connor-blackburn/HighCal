@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from .models import Review
 from .forms import ClientReviewForm
+from django.contrib.auth.decorators import login_required
 
 def all_reviews(request):
     paramsAsc = request.GET.get('asc_votes', '')
@@ -31,6 +32,7 @@ def review_detail(request, pk):
         review.save()
         return redirect('/reviews/', {'review': review})
 
+@login_required
 def create_or_edit_review(request, pk=None):
     review = get_object_or_404(Review, pk=pk) if pk else None
     if request.method == "POST":

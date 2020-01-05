@@ -3,6 +3,7 @@
     <div id="reviews">
         <div class="heading">
             <h2>Reviews</h2>
+            <p>Please Log In To Write A Review!</p>
             <hr/>
         </div>
         <div class="row">
@@ -36,7 +37,10 @@
             </div>
              {% endfor %}
         </div>
+        {% if user.is_authenticated %}
             <a href="{% url 'new_review' %}" class="btn btn-success" >Add New Review</a>
+        {% else %}
+        {% endif %}
             </div>
         
     </div>

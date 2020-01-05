@@ -24,7 +24,7 @@ def user_profile(request):
 def logout(request):
     ''' logout functionality '''
     auth.logout(request)
-    messages.success(request, 'you have logged out')
+    messages.success(request, 'You have successfully logged out')
     return redirect(reverse('index'))
 
 def login(request):
@@ -40,10 +40,10 @@ def login(request):
 
             if user:
                 auth.login(user=user, request=request)
-                messages.success(request, 'you have logged in')
+                messages.success(request, 'You have successfully logged in')
                 return redirect(reverse('index'))
             else:
-                login_form.add_error(None, 'an error occured')
+                login_form.add_error(None, 'An error occured')
 
     else:
         login_form = LoginForm()
@@ -64,9 +64,9 @@ def registration(request):
                                     password=request.POST['password1'])
             if user:
                 auth.login(user=user, request=request)
-                messages.success(request, 'You have registered')
+                messages.success(request, 'You have successfully registered')
             else:
-                messages.error(request, 'Error Occured')
+                messages.error(request, 'An error occured')
     else:
         registration_form = UserRegistrationForm()
 
