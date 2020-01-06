@@ -89,6 +89,34 @@ form {
     max-height: 300px;
     max-width: 700px;
 }
+
+@media (max-width: 320px) {
+    #blog {
+        text-align: center;
+    }
+    .blog_content img {
+        max-width: 230px;
+    }
+
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    #blog {
+        text-align: center;
+    }
+    .blog_content img {
+        max-width: 230px;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    #blog {
+        text-align: center;
+    }
+    .blog_content img {
+        max-width: 230px;
+    }
+}
 /* ----------------------------------------------------------------------------------------
                                  5. Blog Post Expand Page
  --------------------------------------------------------------------------------------- */
@@ -114,6 +142,52 @@ form {
     margin: 3%;
 }
 
+
+@media (max-width: 320px) {
+    #blog_detail {
+        text-align: center;
+    }
+    .blog_content img {
+        max-width: 230px;
+    }
+    #blog_detail h1 {
+    font-size: 3em;
+    }
+    #blog_detail h5 {
+    font-size: 0.9em;
+    }
+
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    #blog_detail {
+        text-align: center;
+    }
+    .blog_content img {
+        max-width: 230px;
+    }
+    #blog_detail h1 {
+    font-size: 3em;
+}
+    #blog_detail h5 {
+    font-size: 0.9em;
+    }   
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    #blog_detail {
+        text-align: center;
+    }
+    .blog_content img {
+        max-width: 230px;
+    }
+    #blog_detail h1 {
+    font-size: 3em;
+    }
+    #blog_detail h5 {
+    font-size: 0.9em;
+    }
+}
 /* ----------------------------------------------------------------------------------------
                                  6. Merchandise Page
  --------------------------------------------------------------------------------------- */
