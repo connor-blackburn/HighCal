@@ -129,6 +129,24 @@ form {
      margin: 1% auto;
  }
 
+ @media (max-width: 320px) {
+    #shop {
+            text-align: center;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    #shop {
+            text-align: center;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    #shop {
+            text-align: center;
+    }
+}
+
 /* ----------------------------------------------------------------------------------------
                                  6. Index Page
  --------------------------------------------------------------------------------------- */
