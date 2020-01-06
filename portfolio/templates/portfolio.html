@@ -3,14 +3,19 @@
 <div id="portfolio_page">
     <div class="heading">
         <h2>Portfolio</h2>
+        <p>Tske a look at our previous work!</p>
         <hr/>
     </div>
     <br/>
     <div class="row">
         {% for portfolio in portfolios %}
-        <div class="col-6">
-            <img class='img-thumbnail portfolio_image' src="/media/{{ portfolio.image }}" alt="">
-        </div>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="/media/{{ portfolio.image }}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{ portfolio.title }}</h5>
+                    <a href="{{ portfolio.link }}" target="_blank"><button type="button" class="btn btn-success col-12">Visit Live Site</button></a>
+                </div>
+            </div>
         {% endfor %}
     </div>
 </div>

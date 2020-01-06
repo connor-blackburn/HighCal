@@ -298,9 +298,88 @@ form {
      padding: 5%;
  }
 
+ #portfolio_index .card {
+     margin: 5% auto;
+ }
+
 .portfolio_index_container {
     width: 80%;
     margin: 0 auto;
+}
+
+@media (max-width: 320px) {
+    #portfolio_index {
+        text-align: center;
+        height: 145vh;
+    }
+
+    #portfolio_index .header {
+    padding-top: 10%;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    #portfolio_index {
+        text-align: center;
+        height: 150vh;
+    }
+
+    #portfolio_index .header {
+    padding-top: 10%;
+    }
+}
+@media (min-width: 376px) and (max-width: 425px) {
+    #portfolio_index {
+        text-align: center;
+        height: 160vh;
+    }
+
+    #portfolio_index .header {
+    padding-top: 10%;
+    }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+    #portfolio_index {
+        text-align: center;
+        height: 115vh;
+    }
+
+    #portfolio_index .header {
+    padding-top: 10%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #portfolio_index {
+        text-align: center;
+        height: 130vh;
+    }
+
+    #portfolio_index .header {
+    padding-top: 10%;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    #portfolio_index {
+        text-align: center;
+        height: 153vh;
+    }
+
+    #portfolio_index .header {
+    padding-top: 10%;
+    }
+}
+
+@media (min-width: 1441px) {
+    #portfolio_index {
+        text-align: center;
+        height: 153vh;
+    }
+
+    #portfolio_index .header {
+    padding-top: 10%;
+    }
 }
 /* ----------------------------------------------------------------------------------------
                                  9. Portfolio Page
@@ -314,8 +393,26 @@ form {
 }
 
 
-#portfolio_page .portfolio_image {
-    margin: 5px;
+#portfolio_page .card {
+     margin: 1% auto;
+ }
+
+  @media (max-width: 320px) {
+    #portfolio_page {
+            text-align: center;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    #portfolio_page {
+            text-align: center;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    #portfolio_page {
+            text-align: center;
+    }
 }
 
  /* ----------------------------------------------------------------------------------------

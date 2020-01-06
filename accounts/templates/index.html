@@ -54,11 +54,15 @@
             </div>
             <hr>
             <div class="row">
-                {% for portfolio in portfolios|slice:":2" %}
-                <div class="portoflio_item col-md-6 col-sm-12">
-                    <img class='img-thumbnail portfolio_image' src="/media/{{ portfolio.image }}" alt="">
-                </div>
-                {% endfor %}
+                    {% for portfolio in portfolios|slice:":2" %}
+                        <div class="card mb-3 col-lg-6 col-md-6">
+                            <img class="card-img-top" src="/media/{{ portfolio.image }}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ portfolio.title }}</h5>
+                                <a href="{{ portfolio.link }}" target="_blank"><button type="button" class="btn btn-success col-12">Visit Live Site</button></a>
+                            </div>
+                        </div>
+                    {% endfor %}
             </div>
             <br>
             <a href="{% url 'portfolios' %}"><button type="button" class="btn btn-success col-md-4 col-sm-12">Visit Full Portfolio</button></a>
@@ -75,29 +79,24 @@
             <hr>
             <div class="row">
             {% for product in products|slice:":2" %}
-          
-
-
-            <div class="card mb-3 col-lg-6 col-md-6">
-                        <img class="card-img-top" src="/media/{{ product.image }}" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ product.name }}</h5>
-                            <p class="card-text">{{ product.description }}</p>
-                            <p class="card-text">£ {{ product.price }}</p>
-                            <form method="post" class="col-12" action="{% url 'add_to_cart' product.id %}">
-                                {% csrf_token %}
-                                <div class="input-group">
-                                    <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Qty">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-success" type="submit">Add</button>
-                                    </span>
-                                </div>
-                            </form>
-                        </div>
+                <div class="card mb-3 col-lg-6 col-md-6">
+                            <img class="card-img-top" src="/media/{{ product.image }}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ product.name }}</h5>
+                                <p class="card-text">{{ product.description }}</p>
+                                <p class="card-text">£ {{ product.price }}</p>
+                                <form method="post" class="col-12" action="{% url 'add_to_cart' product.id %}">
+                                    {% csrf_token %}
+                                    <div class="input-group">
+                                        <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Qty">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-success" type="submit">Add</button>
+                                        </span>
+                                    </div>
+                                </form>
+                            </div>
                     </div>
-
-
-            {% endfor %}
+                {% endfor %}
             </div>
             <a href="{% url 'products' %}"><button type="button" class="btn btn-success col-md-4 col-sm-12">Visit Store</button></a>
         </div>
