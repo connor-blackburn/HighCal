@@ -8,7 +8,6 @@ class Review(models.Model):
     job_title = models.CharField(max_length=200)
     review_title = models.CharField(max_length=200)
     description = models.TextField()
-    image = models.ImageField(upload_to="img", null=True)
     created_date = models.DateTimeField(auto_now_add=True)
     published_date = models.DateTimeField(blank=True, null=True, default=timezone.now)
     views = models.IntegerField(default=0)

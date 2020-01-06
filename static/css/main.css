@@ -241,6 +241,25 @@ form {
      margin: 2% 1%;
  }
 
+@media (max-width: 320px) {
+    #reviews {
+        text-align: center;
+    }
+
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    #reviews {
+        text-align: center;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    #reviews {
+        text-align: center;
+    }
+}
+
   /* ----------------------------------------------------------------------------------------
                                  11. Review Form Page
  --------------------------------------------------------------------------------------- */
@@ -251,6 +270,34 @@ form {
     width: 80%;
     margin: 0 auto;
  }
+
+@media (max-width: 320px) {
+    #review_form {
+        text-align: center;
+    }
+     h1 {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    #review_form {
+        text-align: center;
+    } 
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    #review_form {
+        text-align: center;
+    }
+     h1 {
+        font-size: 1.5rem;
+    }
+}
 
  /* ----------------------------------------------------------------------------------------
                                  11. Review Detail Page
@@ -276,6 +323,36 @@ form {
  #review_detail .review_votes {
      margin: 0 auto;
  }
+
+@media (max-width: 320px) {
+    #review_detail {
+        text-align: center;
+    }
+    .review_detail_content h2 {
+        font-size: 130%;
+    }
+    .review_detail_content h5 {
+        font-size: 85%
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    #review_detail {
+        text-align: center;
+    }
+    .review_detail_content h2 {
+        font-size: 130%;
+    }
+    .review_detail_content h5 {
+        font-size: 85%
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    #review_detail {
+        text-align: center;
+    }
+}
 
  /* ----------------------------------------------------------------------------------------
                                  12. Merchandise Section / Index.html
