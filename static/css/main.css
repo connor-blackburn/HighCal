@@ -615,7 +615,7 @@ form {
 }
 
 /* ----------------------------------------------------------------------------------------
-                                 15. Profile Page
+                                 16. Profile Page
  --------------------------------------------------------------------------------------- */
 #profile {
     font-family: 'Montserrat';
@@ -640,6 +640,61 @@ form {
 @media (min-width: 376px) and (max-width: 425px) {
     #profile {
             text-align: center;
+    }
+}
+
+/* ----------------------------------------------------------------------------------------
+                                 17. Cart Page
+ --------------------------------------------------------------------------------------- */
+#cart {
+    font-family: 'Montserrat';
+    padding: 3%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* ----------------------------------------------------------------------------------------
+                                 18. Checkout Page
+ --------------------------------------------------------------------------------------- */
+#checkout {
+    font-family: 'Montserrat';
+    padding: 3%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.checkout {
+    font-family: 'Montserrat';
+    padding: 3%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media (max-width: 320px) {
+    #checkout {
+        text-align: center;
+        width: 100%;
+    }
+    .checkout {
+        text-align: center;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    #checkout {
+        text-align: center;
+    }
+    .checkout {
+        text-align: center;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+     #checkout {
+        text-align: center;
+    }
+    .checkout {
+        text-align: center;
     }
 }
 /* ----------------------------------------------------------------------------------------

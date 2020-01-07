@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, reverse
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+@login_required
 def view_cart(request):
     """renders cart + contents"""
     return render(request, "cart.html")
