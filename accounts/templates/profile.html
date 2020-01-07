@@ -2,10 +2,25 @@
 
 {% block title %}{{ user }}'s profile{% endblock %}
 
-{% block heading %}This is your profile page{% endblock %}
-
 {% block content %}
-<h4>Hello, {{ user }}.</h4>
-</br>
-<p>Your email is: <strong>{{ profile.email }}</strong>.</p>
+
+<div id="profile">
+    <div class="header">
+        <h1>Your Profile</h1>
+    </div>
+    <hr>
+    <div class="profile_content">
+        <h2>Hello, {{ user }}.</h2>
+        <p>We are very happy to see you are a member. <strong>Make the most of your exclusive account benefits now!</strong></p>
+        <p>Visit the <u><a href="{% url 'products' %}" target="_blank">merchandise store</a></u> and you can now also <u><a href="{% url 'all_reviews' %}" target="_blank">write reviews</a></u>!</p>
+        <hr>
+        <h2>Your Info:</h2>
+        <br>
+        <p>Your email is: <br/> <strong>{{ profile.email }}</strong>.</p>
+        <br>
+        <p>Your username is: <br/> <strong>{{ user }}</strong></p>
+        <hr>
+    </div>
+
+</div>
 {% endblock %}

@@ -615,6 +615,34 @@ form {
 }
 
 /* ----------------------------------------------------------------------------------------
+                                 15. Profile Page
+ --------------------------------------------------------------------------------------- */
+#profile {
+    font-family: 'Montserrat';
+    padding: 3%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media (max-width: 320px) {
+    #profile {
+            text-align: center;
+            width: 100%;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    #profile {
+            text-align: center;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    #profile {
+            text-align: center;
+    }
+}
+/* ----------------------------------------------------------------------------------------
                                   MEDIA QUERIES
  --------------------------------------------------------------------------------------- */
 
