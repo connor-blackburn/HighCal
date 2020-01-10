@@ -13,5 +13,5 @@ class ContactForm(forms.Form):
         super(ContactForm, self).__init__(*args, **kwargs)
         self.fields['contact_name'].label = "Your name:"
         self.fields['contact_email'].label = "Your email:"
-        self.fields['contact_subject'].label = "The Subject:"
+        self.fields['os.environ.get('EMAIL_ADDRESS')'].label = "The Subject:"
         self.fields['content'].label = "What do you want to say?"
