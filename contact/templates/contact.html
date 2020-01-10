@@ -2,10 +2,15 @@
 {% load bootstrap_tags %}
 
 {% block content %}
-<h1>Contact</h1>
-<form role="form" action="" method="post">
-    {% csrf_token %}
-    {{ form | as_bootstrap}}
-    <button type="submit">Submit</button>
+<div id="contact_form">
+    <div class="heading">
+        <h1>Contact</h1>
+    </div>
+    <hr>
+    <form role="form" action="" method="post">
+        {% csrf_token %}
+        {{ form | as_bootstrap}}
+        <button class="btn btn-success col-sm-12" type="submit">Submit</button>
 </form>
+</div>
 {% endblock %}
