@@ -32,7 +32,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = [os.environ.get('GITPOD_HOST'), 'highcal-django.herokuapp.com']
 
-
 # Application definition
 
 INSTALLED_APPS = [
