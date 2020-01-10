@@ -1,4 +1,5 @@
 from .forms import ContactForm
+from django.contrib import auth, messages
 from django.core.mail import EmailMessage
 from django.shortcuts import redirect
 from django.template.loader import get_template
