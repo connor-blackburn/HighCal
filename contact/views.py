@@ -39,8 +39,8 @@ def contact(request):
             email = EmailMessage(
                 "New contact form submission",
                 content,
-                "Your website" +'',
-                ['youremail@gmail.com'],
+                "HighCal" +'',
+                ['djangoemailtest98@gmail.com'],
                 headers = {'Reply-To': contact_email }
             )
             email.send()
