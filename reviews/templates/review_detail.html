@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% block title %}Review Post{% endblock %}
 {% block content %}
 <div id="review_detail">
         <div class="heading">
@@ -10,8 +11,8 @@
             <h5>{{ review.description }}</h5>
             <p>Published on: {{ review.published_date }}</p>
         </div>
-        <div class="review_votes text-center">
-                <form class='text-center col-12' method="post" action="{% url 'upvotes' review.id %}">
+        <div class="review_votes text-center col-12">
+                <form class='text-center col-md-4 col-sm-12' method="post" action="{% url 'upvotes' review.id %}">
                     {% csrf_token %}
                     <button type="submit" class="btn btn btn-success col-sm-12">
                         Votes <span class="badge badge-light">{{ review.upvotes }}</span>
@@ -19,6 +20,6 @@
                 </form>
          </div>
          <hr>
-    <p><a href="{% url 'get_reviews' %}"  class="btn btn-success col-sm-12">Return To Reviews</a></p>
+    <p><a href="{% url 'get_reviews' %}"  class="btn btn-success col-md-4 col-sm-12">Return To Reviews</a></p>
 </div>
 {% endblock %} 
