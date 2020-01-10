@@ -222,7 +222,7 @@ form {
 }
 
 /* ----------------------------------------------------------------------------------------
-                                 6. Index Page
+                                 6. Index Page + Hero Section
  --------------------------------------------------------------------------------------- */
 #index {
     font-family: 'Montserrat';
@@ -254,6 +254,196 @@ form {
     font-size: 2.75em;
 }
 
+@media (max-width: 320px) {
+    .hero_image {
+        position: relative;
+        right: 20%;
+        bottom: 5%;
+        top: 15%;
+        left: 2%;
+    }
+
+    .hero_image img {
+        height: 190px;
+        width: 190px;
+    }
+
+    .hero_section {
+        text-align: center;
+        padding: 3%;
+        background-image: linear-gradient(to bottom, #f8f9fa, #d8f1ff, #adecff, #76e7fb, #12e2eb);
+        height: 60vh;
+        }
+
+    .hero_section h1 {
+        font-size: 2.3em;
+        line-height: 2;
+    }
+
+    .hero_section h3 {
+        font-size: 1.15em;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+       .hero_image {
+        position: relative;
+        right: 20%;
+        bottom: 5%;
+        top: 13%;
+        left: 2%;
+    }
+
+    .hero_image img {
+        height: 240px;
+        width: 240px;
+    }
+
+    .hero_section {
+        text-align: center;
+        padding: 3%;
+        background-image: linear-gradient(to bottom, #f8f9fa, #d8f1ff, #adecff, #76e7fb, #12e2eb);
+        height: 60vh;
+        }
+
+    .hero_section .heading {
+        margin-top: -2%;
+    }
+    .hero_section h1 {
+        font-size: 2.3em;
+        line-height: 2;
+    }
+
+    .hero_section h3 {
+        font-size: 1.15em;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    .hero_section {
+        text-align: center;
+        padding: 3%;
+        background-image: linear-gradient(to bottom, #f8f9fa, #d8f1ff, #adecff, #76e7fb, #12e2eb);
+        height: 60vh;
+        }
+
+     .hero_image {
+        position: relative;
+        right: 20%;
+        bottom: 5%;
+        top: 13%;
+        left: 2%;
+    }
+
+    .hero_image img {
+        height: 250px;
+        width: 250px;
+    }
+
+    .hero_section .heading {
+        margin-top: -2%;
+    }
+    .hero_section h1 {
+        font-size: 2.3em;
+        line-height: 2;
+    }
+
+    .hero_section h3 {
+        font-size: 1.15em;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    .hero_section {
+        text-align: center;
+        padding: 3%;
+        background-image: linear-gradient(to bottom, #f8f9fa, #d8f1ff, #adecff, #76e7fb, #12e2eb);
+        height: 60vh;
+        }
+
+     .hero_image {
+        position: relative;
+        right: 20%;
+        bottom: 5%;
+        top: 13%;
+        left: 2%;
+    }
+
+    .hero_image img {
+        height: 250px;
+        width: 250px;
+    }
+    .hero_section h1 {
+        font-size: 2.3em;
+        line-height: 2;
+    }
+
+    .hero_section h3 {
+        font-size: 1.15em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+     .hero_section {
+        text-align: center;
+        padding: 3%;
+        background-image: linear-gradient(to bottom, #f8f9fa, #d8f1ff, #adecff, #76e7fb, #12e2eb);
+        height: 60vh;
+        }
+
+     .hero_image {
+        position: relative;
+        right: 20%;
+        bottom: 5%;
+        top: 13%;
+        left: 2%;
+    }
+
+    .hero_image img {
+        height: 250px;
+        width: 250px;
+    }
+    .hero_section h1 {
+        font-size: 4.3em;
+        line-height: 2;
+    }
+
+    .hero_section h3 {
+        font-size: 2.15em;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .hero_section {
+        text-align: center;
+        padding: 3%;
+        background-image: linear-gradient(to bottom, #f8f9fa, #d8f1ff, #adecff, #76e7fb, #12e2eb);
+        height: 60vh;
+        }
+
+     .hero_image {
+        position: relative;
+        right: 20%;
+        bottom: 5%;
+        top: 13%;
+        left: 2%;
+    }
+
+    .hero_image img {
+        height: 330px;
+        width: 330px;
+    }
+    .hero_section h1 {
+        font-size: 4.3em;
+        line-height: 2;
+    }
+
+    .hero_section h3 {
+        font-size: 2.15em;
+    }
+}
+
+
 /* ----------------------------------------------------------------------------------------
                                  7. Why Us Section / Index.html
  --------------------------------------------------------------------------------------- */
@@ -274,6 +464,48 @@ form {
 .why_us i {
     margin: 10px;
        color: #a39291;
+}
+
+@media (max-width: 320px) {
+    .why_us i {
+        font-size: 6em;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    .why_us i {
+        font-size: 6em;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    .why_us i {
+        font-size: 6em;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    .why_us i {
+        font-size: 6em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .why_us i {
+        font-size: 6em;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .why_us i {
+        font-size: 6em;
+    }
+}
+
+@media (min-width: 1441px) {
+   .why_us i {
+        font-size: 6em;
+    } 
 }
 
 /* ----------------------------------------------------------------------------------------
@@ -310,32 +542,29 @@ form {
 @media (max-width: 320px) {
     #portfolio_index {
         text-align: center;
-        height: 145vh;
     }
 
     #portfolio_index .header {
-    padding-top: 10%;
+        padding-top: 20%;
     }
 }
 
 @media (min-width: 321px) and (max-width: 375px) {
     #portfolio_index {
         text-align: center;
-        height: 150vh;
     }
 
     #portfolio_index .header {
-    padding-top: 10%;
+        padding-top: 20%;
     }
 }
 @media (min-width: 376px) and (max-width: 425px) {
     #portfolio_index {
         text-align: center;
-        height: 160vh;
     }
 
     #portfolio_index .header {
-    padding-top: 10%;
+        padding-top: 20%;
     }
 }
 @media (min-width: 426px) and (max-width: 768px) {
@@ -566,10 +795,8 @@ form {
 #blog_section {
     font-family: 'Montserrat';
     padding: 3%;
-    height: 100vh;
     margin: 0 auto;
     text-align: center;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
     background-color: #8e8e8e;
 }
 
@@ -708,316 +935,3 @@ form {
     margin: 0 auto;
 }
 
-
-
-/* ----------------------------------------------------------------------------------------
-                                  MEDIA QUERIES
- --------------------------------------------------------------------------------------- */
-
-  /* ----------------------------------------------------------------------------------------
-                                 1. Hero Section /Index.html
- --------------------------------------------------------------------------------------- */
-@media (max-width: 320px) {
-    .hero_image {
-        position: relative;
-        right: 20%;
-        bottom: 5%;
-        top: 15%;
-        left: 2%;
-    }
-
-    .hero_image img {
-        height: 190px;
-        width: 190px;
-    }
-
-    .hero_section {
-        text-align: center;
-        padding: 3%;
-        background-image: linear-gradient(to bottom, #f8f9fa, #d8f1ff, #adecff, #76e7fb, #12e2eb);
-        height: 60vh;
-        }
-
-    .hero_section h1 {
-        font-size: 2.3em;
-        line-height: 2;
-    }
-
-    .hero_section h3 {
-        font-size: 1.15em;
-    }
-}
-
-@media (min-width: 321px) and (max-width: 375px) {
-       .hero_image {
-        position: relative;
-        right: 20%;
-        bottom: 5%;
-        top: 13%;
-        left: 2%;
-    }
-
-    .hero_image img {
-        height: 240px;
-        width: 240px;
-    }
-
-    .hero_section {
-        text-align: center;
-        padding: 3%;
-        background-image: linear-gradient(to bottom, #f8f9fa, #d8f1ff, #adecff, #76e7fb, #12e2eb);
-        height: 60vh;
-        }
-
-    .hero_section .heading {
-        margin-top: -2%;
-    }
-    .hero_section h1 {
-        font-size: 2.3em;
-        line-height: 2;
-    }
-
-    .hero_section h3 {
-        font-size: 1.15em;
-    }
-}
-
-@media (min-width: 376px) and (max-width: 425px) {
-    .hero_section {
-        text-align: center;
-        padding: 3%;
-        background-image: linear-gradient(to bottom, #f8f9fa, #d8f1ff, #adecff, #76e7fb, #12e2eb);
-        height: 60vh;
-        }
-
-     .hero_image {
-        position: relative;
-        right: 20%;
-        bottom: 5%;
-        top: 13%;
-        left: 2%;
-    }
-
-    .hero_image img {
-        height: 250px;
-        width: 250px;
-    }
-
-    .hero_section .heading {
-        margin-top: -2%;
-    }
-    .hero_section h1 {
-        font-size: 2.3em;
-        line-height: 2;
-    }
-
-    .hero_section h3 {
-        font-size: 1.15em;
-    }
-}
-
-@media (min-width: 426px) and (max-width: 768px) {
-    .hero_section {
-        text-align: center;
-        padding: 3%;
-        background-image: linear-gradient(to bottom, #f8f9fa, #d8f1ff, #adecff, #76e7fb, #12e2eb);
-        height: 60vh;
-        }
-
-     .hero_image {
-        position: relative;
-        right: 20%;
-        bottom: 5%;
-        top: 13%;
-        left: 2%;
-    }
-
-    .hero_image img {
-        height: 250px;
-        width: 250px;
-    }
-    .hero_section h1 {
-        font-size: 2.3em;
-        line-height: 2;
-    }
-
-    .hero_section h3 {
-        font-size: 1.15em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-     .hero_section {
-        text-align: center;
-        padding: 3%;
-        background-image: linear-gradient(to bottom, #f8f9fa, #d8f1ff, #adecff, #76e7fb, #12e2eb);
-        height: 60vh;
-        }
-
-     .hero_image {
-        position: relative;
-        right: 20%;
-        bottom: 5%;
-        top: 13%;
-        left: 2%;
-    }
-
-    .hero_image img {
-        height: 250px;
-        width: 250px;
-    }
-    .hero_section h1 {
-        font-size: 4.3em;
-        line-height: 2;
-    }
-
-    .hero_section h3 {
-        font-size: 2.15em;
-    }
-}
-
-@media (min-width: 1025px) and (max-width: 1440px) {
-    .hero_section {
-        text-align: center;
-        padding: 3%;
-        background-image: linear-gradient(to bottom, #f8f9fa, #d8f1ff, #adecff, #76e7fb, #12e2eb);
-        height: 60vh;
-        }
-
-     .hero_image {
-        position: relative;
-        right: 20%;
-        bottom: 5%;
-        top: 13%;
-        left: 2%;
-    }
-
-    .hero_image img {
-        height: 330px;
-        width: 330px;
-    }
-    .hero_section h1 {
-        font-size: 4.3em;
-        line-height: 2;
-    }
-
-    .hero_section h3 {
-        font-size: 2.15em;
-    }
-}
-
-
- /* ----------------------------------------------------------------------------------------
-                                 2. Why Us Section /Index.html
- --------------------------------------------------------------------------------------- */
-@media (max-width: 320px) {
-    .why_us i {
-        font-size: 6em;
-    }
-}
-
-@media (min-width: 321px) and (max-width: 375px) {
-    .why_us i {
-        font-size: 6em;
-    }
-}
-
-@media (min-width: 376px) and (max-width: 425px) {
-    .why_us i {
-        font-size: 6em;
-    }
-}
-
-@media (min-width: 426px) and (max-width: 768px) {
-    .why_us i {
-        font-size: 6em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .why_us i {
-        font-size: 6em;
-    }
-}
-
-@media (min-width: 1025px) and (max-width: 1440px) {
-    .why_us i {
-        font-size: 6em;
-    }
-}
-
-@media (min-width: 1441px) {
-   .why_us i {
-        font-size: 6em;
-    } 
-}
- /* ----------------------------------------------------------------------------------------
-                                 2. Portfolio Section /Index.html
- --------------------------------------------------------------------------------------- */
-@media (max-width: 320px) {
-    #portfolio_index .header {
-        margin-top: 11%;
-    }
-
-    #portfolio_index .img-thumbnail {
-        margin: 2% auto;
-    }
-}
-
-@media (min-width: 321px) and (max-width: 375px) {
-     #portfolio_index .header {
-        margin-top: 9%;
-    }
-    #portfolio_index .img-thumbnail {
-        margin: 2% auto;
-    }
-}
-
-@media (min-width: 376px) and (max-width: 425px) {
-     #portfolio_index .header {
-        margin-top: 9%;
-    }
-    #portfolio_index .img-thumbnail {
-        margin: 2% auto;
-    }
-}
-
- /* ----------------------------------------------------------------------------------------
-                                 3. Blog Section /Index.html
- --------------------------------------------------------------------------------------- */
-@media (max-width: 320px) {
-    #blog_section {
-        height: 126vh;
-    }
-
-}
-
-@media (min-width: 321px) and (max-width: 375px) {
-    #blog_section {
-        height: 135vh;
-    }
-}
-
-@media (min-width: 376px) and (max-width: 425px) {
-    #blog_section {
-        height: 140vh;
-    }
-}
-
-@media (min-width: 426px) and (max-width: 768px) {
-    #blog_section {
-        height: 130vh;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    #blog_section {
-        height: 130vh;
-    }
-}
-
-@media (min-width: 1025px) and (max-width: 1440px) {
-       #blog_section {
-        height: 100vh;
-    }
-}
