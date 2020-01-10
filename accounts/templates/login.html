@@ -5,11 +5,15 @@
 {% block title %}Login Page{% endblock %}
 
 {% block content %}
+<article>
     <div id="login_page">
+    <header>
         <div class="header">
             <h2>Login Page</h2>
         </div>
+    </header>
         <hr>
+    <section>
         <form method="POST">
             {% csrf_token %}
             {{ login_form | as_bootstrap }}
@@ -17,4 +21,6 @@
         </form>     
         <p>Forgotten Password? <br/><a href='{% url 'password_reset' %}'>Reset It Here</a></p>
     </div>
+    </section>
+</article>
 {% endblock %}

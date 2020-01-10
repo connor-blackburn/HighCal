@@ -1,12 +1,16 @@
 {% extends 'base.html' %}
 {% block title %}Reviews Page{% endblock %}
 {% block content %}
+<article>
     <div id="reviews">
+    <header>
         <div class="heading">
             <h2>Reviews</h2>
             <p>Please Log In To Write A Review!</p>
             <hr/>
         </div>
+    </header>
+    <section>
         <div class="row">
             <div class="dropdown col-sm-12">
                 <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -20,6 +24,8 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section>
         <div class="row">
             {% for review in reviews %}
             <div class="card text-center">
@@ -43,6 +49,7 @@
         {% else %}
         {% endif %}
             </div>
-        
     </div>
+    </section>
+</article>
 {% endblock %}

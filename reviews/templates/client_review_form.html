@@ -2,19 +2,22 @@
 {% load bootstrap_tags %}
 {% block title %}Review Form{% endblock %}
 {% block content %}
-
-<div id="review_form">
-    <div class="heading">
-        <h2>Review Form</h2>
-       <hr/>
+<article>
+    <div id="review_form">
+    <header>
+        <div class="heading">
+            <h2>Review Form</h2>
+        </div>
+        <hr/>
+    </header>
+    <section>
+        <h1>Fill out the form below to submit your review</h1>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form | as_bootstrap }}
+            <button type="submit" class="btn btn-success rounded-0">Add Client Review</button>
+        </form>
     </div>
-
-    <h1>Fill out the form below to submit your review</h1>
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-         {{ form | as_bootstrap }}
-        <button type="submit" class="btn btn-success rounded-0">Add Client Review</button>
-    </form>
-</div>
-
+    </section>
+</article>
 {% endblock %}

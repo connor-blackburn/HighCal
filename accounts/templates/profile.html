@@ -1,14 +1,16 @@
 {% extends 'base.html' %}}
-
 {% block title %}{{ user }}'s profile{% endblock %}
 
 {% block content %}
-
+<article>
 <div id="profile">
+<header>
     <div class="header">
         <h1>Your Profile</h1>
     </div>
+</header>
     <hr>
+<section>
     <div class="profile_content">
         <h2>Hello, {{ user }}.</h2>
         <p>We are very happy to see you are a member. <strong>Make the most of your exclusive account benefits now!</strong></p>
@@ -21,6 +23,7 @@
         <p>Your username is: <br/> <strong>{{ user }}</strong></p>
         <hr>
     </div>
-
 </div>
+</section>
+</article>
 {% endblock %}

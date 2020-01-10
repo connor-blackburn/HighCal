@@ -15,11 +15,15 @@
 {% block title %}Checkout Page{% endblock %}
 
 {% block content %}
+<article>
     <div id='checkout'>
+    <header>
         <div class="heading">
             <h2>Checkout</h2>
         </div>
+    </header>
         <hr/>
+    <section>
     {% for item in cart_items %}
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="/media/{{ item.product.image }}" alt="Card image cap">
@@ -78,4 +82,6 @@
                 </div>
         </div>
     </div>
+    </section>
+</article>
 {% endblock %}

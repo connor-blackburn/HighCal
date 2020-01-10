@@ -1,26 +1,29 @@
 {% extends 'base.html' %}
 {% block title %}Blog Post{% endblock %}
 {% block content %}
-<div id="blog_detail" class="text-center">
-        <div class="blog_content ">
-         <h1>{{ post.title }}</h1>
-            {% if post.image %}
-                <img class="img-fluid" src="/media/{{ post.image }}">
-            {% endif %}
-        </div>
-        <div class="text-center blog_content">
-            <br/>
-            <h5>{{ post.content }}</h5>
-            <p>Views: {{post.views}}</p>
-            <p>Tag: {{ post.tag }}</p>
-        </div>
-        <div class="author_body text-center">
-            <div class="author_img">
-                <img src="/media/images/self_profile.png" class="img-circle">
-             </div>
-             <p>Author: Connor B.</p>
-        </div>
-            <p><a href="{% url 'get_posts' %}"  class="btn btn-success">Return To Blog</a></p>
-
-</div>
+<article>
+    <section>
+    <div id="blog_detail" class="text-center">
+            <div class="blog_content ">
+            <h1>{{ post.title }}</h1>
+                {% if post.image %}
+                    <img class="img-fluid" src="/media/{{ post.image }}">
+                {% endif %}
+            </div>
+            <div class="text-center blog_content">
+                <br/>
+                <h5>{{ post.content }}</h5>
+                <p>Views: {{post.views}}</p>
+                <p>Tag: {{ post.tag }}</p>
+            </div>
+            <div class="author_body text-center">
+                <div class="author_img">
+                    <img src="/media/images/self_profile.png" class="img-circle">
+                </div>
+                <p>Author: Connor B.</p>
+            </div>
+                <p><a href="{% url 'get_posts' %}"  class="btn btn-success">Return To Blog</a></p>
+    </div>
+    </section>
+</article>
 {% endblock %} 

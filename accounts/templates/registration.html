@@ -1,15 +1,17 @@
 {% extends 'base.html' %}}
-
 {% load bootstrap_tags %}
-
 {% block title %}Registration Page{% endblock %}
 
 {% block content %}
+<article>
     <div id="reg_page">
+    <header>
         <div class="header">
             <h2>Registration Page</h2>
         </div>
+    </header>
         <hr>
+    <section>
         <p>Already have an account? <a href='{% url 'login' %}'>Log in here.</a></p>
         <form method="POST">
             {% csrf_token %}
@@ -17,4 +19,6 @@
             <input class="btn btn-primary" type="submit" value="Register">
         </form>
     </div>
+    </section>
+</article>
 {% endblock %}

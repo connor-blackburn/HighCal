@@ -1,43 +1,51 @@
 {% extends 'base.html' %}
 {% block title %}Merchandise Page{% endblock %}
 {% block content %}
-<div id="shop">
-    <div class="heading">
-        <h2>Merchandise</h2>
-        <p>Please Log In To Add Items To Cart!</p>
-        <strong><p>Please Ensure 'Qty' Is Minimum of 1 When Adding Items To Cart</p></strong>
-        <hr/>
-    </div>
-    <div class="product_Search">
-        <form class="form-inline" action="{% url 'search_product' %}" method='GET'>
-            <input class="form-control mr-sm-2" name='q' type="text" placeholder="Search Products" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0 col-sm-12 col-md-4" type="submit">Search</button>
-        </form>
-    </div>
-    <br/>
-    <div id='products' class="row">
-        {% for product in products %}
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="/media/{{ product.image }}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">{{ product.name }}</h5>
-                    <p class="card-text">{{ product.description }}</p>
-                    <p class="card-text">£ {{ product.price }}</p>
-                    {% if user.is_authenticated %}
-                    <form method="post" class="col-12" action="{% url 'add_to_cart' product.id %}">
-                        {% csrf_token %}
-                        <div class="input-group">
-                            <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Qty">
-                            <span class="input-group-btn">
-                                <button class="btn btn-success" type="submit">Add</button>
-                            </span>
-                        </div>
-                    </form>
-                    {% else %}
-                    {% endif %}
+<article>
+    <div id="shop">
+    <header>
+        <div class="heading">
+            <h2>Merchandise</h2>
+            <p>Please Log In To Add Items To Cart!</p>
+            <strong><p>Please Ensure 'Qty' Is Minimum of 1 When Adding Items To Cart</p></strong>
+            <hr/>
+        </div>
+    </header>
+    <section>
+        <div class="product_Search">
+            <form class="form-inline" action="{% url 'search_product' %}" method='GET'>
+                <input class="form-control mr-sm-2" name='q' type="text" placeholder="Search Products" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0 col-sm-12 col-md-4" type="submit">Search</button>
+            </form>
+        </div>
+    </section>
+    <section>
+        <br/>
+        <div id='products' class="row">
+            {% for product in products %}
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="/media/{{ product.image }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        <p class="card-text">{{ product.description }}</p>
+                        <p class="card-text">£ {{ product.price }}</p>
+                        {% if user.is_authenticated %}
+                        <form method="post" class="col-12" action="{% url 'add_to_cart' product.id %}">
+                            {% csrf_token %}
+                            <div class="input-group">
+                                <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Qty">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-success" type="submit">Add</button>
+                                </span>
+                            </div>
+                        </form>
+                        {% else %}
+                        {% endif %}
+                    </div>
                 </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
-</div>
+    </section>
+</article>
 {% endblock %}

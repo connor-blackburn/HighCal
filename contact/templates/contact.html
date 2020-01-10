@@ -4,16 +4,22 @@
 {% block title %}Contact Us{% endblock %}
 
 {% block content %}
-<div id="contact_form">
-    <div class="heading">
-        <h1>Contact Us</h1>
-        <p>Fill Out The Form Below + We Will Reply ASAP!</p>
+<article>
+    <div id="contact_form">
+    <header>
+        <div class="heading">
+            <h1>Contact Us</h1>
+            <p>Fill Out The Form Below + We Will Reply ASAP!</p>
+        </div>
+    </header>
+        <hr>
+    <section>
+        <form role="form" action="" method="post">
+            {% csrf_token %}
+            {{ form | as_bootstrap}}
+            <button class="btn btn-success col-sm-12" type="submit">Submit</button>
+    </form>
     </div>
-    <hr>
-    <form role="form" action="" method="post">
-        {% csrf_token %}
-        {{ form | as_bootstrap}}
-        <button class="btn btn-success col-sm-12" type="submit">Submit</button>
-</form>
-</div>
+    </section>
+</article>
 {% endblock %}

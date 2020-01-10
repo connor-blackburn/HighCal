@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
 {% block title %}Blog{% endblock %}
 {% block content %}
+<article>
     <div id="blog">
+    <header>
         <div class="heading">
             <h2>Blog</h2>
             <hr/>
         </div>
+    </header>
+    <section>
         <div class="blog_search">
             <form class="form-inline" action="{% url 'search_blog' %}" method='GET'>
                 <input class="form-control mr-sm-2" name='q' type="text" placeholder="Search Blogposts" aria-label="Search">
@@ -13,6 +17,8 @@
             </form>
         </div>
         <br/>
+    </section>
+    <section>
         {% for post in posts %}
             <div class="row">
                 <div class="author_body col-md-2 text-center">
@@ -35,7 +41,7 @@
                 </div>
             </div><hr/>
             {% endfor %}
-            
-
     </div>
+    </section>
+</article>
 {% endblock %}

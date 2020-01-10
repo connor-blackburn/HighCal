@@ -5,11 +5,15 @@
 
 
 {% block content %}
+<article>
     <div id='cart'>
+    <header>
         <div class="heading">
             <h2>Your Cart</h2>
         </div>
+    </header>
         <hr/>
+    <section>
         {% for item in cart_items %}
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="/media/{{ item.product.image }}" alt="Card image cap">
@@ -37,4 +41,6 @@
             <a href="{% url 'checkout' %}"><button type="button" class="btn btn-success col-sm-12">Checkout</button></a>
         </div>
     </div>
+</section>
+</article>
 {% endblock %}

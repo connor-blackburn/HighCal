@@ -2,150 +2,173 @@
 
 {% block title %}Index Page{% endblock %}
 
-{% block content %}
-<div id="index">
-    <!--hero Section-->
-    <div class="hero_section container-fluid">
-        <div class="heading">
-            <h3>We Develop:</h3>
-            <h1><div id="app"></div> </h1>  
-        </div>
-        <a href="{% url 'contact' %}"><button type="button" class="btn btn-light">Contact Us!</button></a>
-        <div class="hero_image">
-            <img src="static/images/index_graphic.png" alt="hero image">
-        </div>
-    </div>
-    <div class="wave_svg">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#12E2EB" fill-opacity="1" d="M0,128L40,117.3C80,107,160,85,240,74.7C320,64,400,64,480,90.7C560,117,640,171,720,181.3C800,192,880,160,960,154.7C1040,149,1120,171,1200,154.7C1280,139,1360,85,1400,58.7L1440,32L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
-        </svg>
-    </div>
-    <!---->
-    <!-- Why Us Section-->
-    <div id="why_us">
-        <div class="why_us container-fluid text-center">
-        <div class="header">
-            <h2>Why Us?</h2>
-        </div>
-        <hr>
-            <div class="row why_icons">
-                <div class="bolt_icon col-md-4 col-sm-12">
-                    <i class="fas fa-bolt"></i>
-                    <p>Fast Delivery</p>
-                </div>
-                <div class="suit_icon col-md-4 col-sm-12">
-                    <i class="fas fa-user-tie"></i>
-                    <p>Professional Service</p>
-                </div>
-                <div class="handshake_icon col-md-4 col-sm-12">
-                    <i class="fas fa-handshake"></i>
-                    <p>Reliable Products</p>
+
+    {% block content %}
+<article>
+    <div id="index">
+        <!--hero Section-->
+        <section>
+            <div class="hero_section container-fluid">
+                <header>
+                    <div class="heading">
+                        <h3>We Develop:</h3>
+                        <h1><div id="app"></div> </h1>  
+                    </div>
+                </header>
+                <a href="{% url 'contact' %}"><button type="button" class="btn btn-light">Contact Us!</button></a>
+                <div class="hero_image">
+                    <img src="static/images/index_graphic.png" alt="hero image">
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- -->
-    <!-- Portfolio Section-->
-    <div id='portfolio_index' class="text-center">
-        <div class="portfolio_index_container">
-            <div class="header">
-                <h2>Portfolio</h2>
-                <p>View Our Previous Work</p>
+            <div class="wave_svg">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#12E2EB" fill-opacity="1" d="M0,128L40,117.3C80,107,160,85,240,74.7C320,64,400,64,480,90.7C560,117,640,171,720,181.3C800,192,880,160,960,154.7C1040,149,1120,171,1200,154.7C1280,139,1360,85,1400,58.7L1440,32L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+                </svg>
             </div>
-            <hr>
-            <div class="row">
-                    {% for portfolio in portfolios|slice:":2" %}
-                        <div class="card mb-3 col-lg-6 col-md-6">
-                            <img class="card-img-top" src="/media/{{ portfolio.image }}" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ portfolio.title }}</h5>
-                                <a href="{{ portfolio.link }}" target="_blank"><button type="button" class="btn btn-success col-12">Visit Live Site</button></a>
-                            </div>
+        </section>
+        <!---->
+        <!-- Why Us Section-->
+        <section>
+            <div id="why_us">
+                <div class="why_us container-fluid text-center">
+                <header>
+                    <div class="header">
+                        <h2>Why Us?</h2>
+                    </div>
+                </header>
+                <hr>
+                    <div class="row why_icons">
+                        <div class="bolt_icon col-md-4 col-sm-12">
+                            <i class="fas fa-bolt"></i>
+                            <p>Fast Delivery</p>
                         </div>
-                    {% endfor %}
+                        <div class="suit_icon col-md-4 col-sm-12">
+                            <i class="fas fa-user-tie"></i>
+                            <p>Professional Service</p>
+                        </div>
+                        <div class="handshake_icon col-md-4 col-sm-12">
+                            <i class="fas fa-handshake"></i>
+                            <p>Reliable Products</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <br>
-            <a href="{% url 'portfolios' %}"><button type="button" class="btn btn-success col-md-4 col-sm-12">Visit Full Portfolio</button></a>
-        </div>
-    </div>
-    <!-- --> 
-    <!-- Merchandise Section-->
-    <div id="merchandise_section">
-        <div class="merchandise_index_container container">
-            <div class="header">
-                <h2>Merchandise</h2>
-                <p>Show Your Support And View Our Merchandise Store!</p>
-            </div>
-            <hr>
-            <div class="row">
-            {% for product in products|slice:":2" %}
-                <div class="card mb-3 col-lg-6 col-md-6">
-                            <img class="card-img-top" src="/media/{{ product.image }}" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ product.name }}</h5>
-                                <p class="card-text">{{ product.description }}</p>
-                                <p class="card-text">£ {{ product.price }}</p>
-                                <form method="post" class="col-12" action="{% url 'add_to_cart' product.id %}">
-                                    {% csrf_token %}
-                                    <div class="input-group">
-                                        <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Qty">
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-success" type="submit">Add</button>
-                                        </span>
+        </section>
+        <!-- -->
+        <!-- Portfolio Section-->
+        <section>
+            <div id='portfolio_index' class="text-center">
+                <div class="portfolio_index_container">
+                <header>
+                    <div class="header">
+                        <h2>Portfolio</h2>
+                        <p>View Our Previous Work</p>
+                    </div>
+                </header>
+                    <hr>
+                    <div class="row">
+                            {% for portfolio in portfolios|slice:":2" %}
+                                <div class="card mb-3 col-lg-6 col-md-6">
+                                    <img class="card-img-top" src="/media/{{ portfolio.image }}" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ portfolio.title }}</h5>
+                                        <a href="{{ portfolio.link }}" target="_blank"><button type="button" class="btn btn-success col-12">Visit Live Site</button></a>
                                     </div>
-                                </form>
+                                </div>
+                            {% endfor %}
+                    </div>
+                    <br>
+                    <a href="{% url 'portfolios' %}"><button type="button" class="btn btn-success col-md-4 col-sm-12">Visit Full Portfolio</button></a>
+                </div>
+            </div>
+        </section>
+        <!-- --> 
+        <!-- Merchandise Section-->
+        <section>
+            <div id="merchandise_section">
+                <div class="merchandise_index_container container">
+                <header>
+                    <div class="header">
+                        <h2>Merchandise</h2>
+                        <p>Show Your Support And View Our Merchandise Store!</p>
+                    </div>
+                </header>
+                    <hr>
+                    <div class="row">
+                    {% for product in products|slice:":2" %}
+                        <div class="card mb-3 col-lg-6 col-md-6">
+                                    <img class="card-img-top" src="/media/{{ product.image }}" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ product.name }}</h5>
+                                        <p class="card-text">{{ product.description }}</p>
+                                        <p class="card-text">£ {{ product.price }}</p>
+                                        <form method="post" class="col-12" action="{% url 'add_to_cart' product.id %}">
+                                            {% csrf_token %}
+                                            <div class="input-group">
+                                                <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Qty">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-success" type="submit">Add</button>
+                                                </span>
+                                            </div>
+                                        </form>
+                                    </div>
                             </div>
+                        {% endfor %}
                     </div>
-                {% endfor %}
+                    <a href="{% url 'products' %}"><button type="button" class="btn btn-success col-md-4 col-sm-12">Visit Store</button></a>
+                </div>
             </div>
-            <a href="{% url 'products' %}"><button type="button" class="btn btn-success col-md-4 col-sm-12">Visit Store</button></a>
-        </div>
-    </div>
-    <!---->
-    <!--Blog Section-->
-    <div id="blog_section">
-        <div class="blog_index_container container">
-            <div class="header">
-                <h2>Blog</h2>
-                <p>View Our Full Blog Sections For Recent News + Tips!</p>
-            </div>
-            <hr>
-            <div class="row">
-                {% for post in posts|slice:":1" %}
-                    <div class="card mb-3">
-                        <img class="card-img-top" src="/media/{{ post.image }}" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ post.title }}</h5>
-                            <p class="card-text">{{ post.content|truncatewords:10 }}</p>
-                            <p><a href="{% url 'post_detail' post.id %}"  class="btn btn-success">Read Full Post</a></p>
-                            <p class="card-text"><small class="text-muted">Published on: {{ post.published_date }}</small></p>
-                        </div>
+        </section>
+        <!---->
+        <!--Blog Section-->
+        <section>
+            <div id="blog_section">
+                <div class="blog_index_container container">
+                <header>
+                    <div class="header">
+                        <h2>Blog</h2>
+                        <p>View Our Full Blog Sections For Recent News + Tips!</p>
                     </div>
-                {% endfor %}
+                </header>
+                    <hr>
+                    <div class="row">
+                        {% for post in posts|slice:":1" %}
+                            <div class="card mb-3">
+                                <img class="card-img-top" src="/media/{{ post.image }}" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ post.title }}</h5>
+                                    <p class="card-text">{{ post.content|truncatewords:10 }}</p>
+                                    <p><a href="{% url 'post_detail' post.id %}"  class="btn btn-success">Read Full Post</a></p>
+                                    <p class="card-text"><small class="text-muted">Published on: {{ post.published_date }}</small></p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <a href="{% url 'get_posts' %}"><button type="button" class="btn btn-success col-md-4 col-sm-12">View Blog</button></a>
+                </div>
             </div>
-            <a href="{% url 'get_posts' %}"><button type="button" class="btn btn-success col-md-4 col-sm-12">View Blog</button></a>
-        </div>
-    </div>
+        </section>
+        <!---->
+    
+    <!--JavaScript Section-->
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script type='text/javascript'>
+            var app = document.getElementById('app');
+            var typewriter = new Typewriter(app, {
+                loop: true
+            });
+            typewriter.typeString('Websites')
+                .pauseFor(200)
+                .deleteAll()
+                .typeString('Apps')
+                .pauseFor(200)
+                .deleteAll()
+                .typeString('Sales Funnels')
+                .pauseFor(200)
+                .deleteAll()
+                .typeString('Landing Pages')
+                .start();
+    </script>
     <!---->
-  
-  <!--JavaScript Section-->
-  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-  <script type='text/javascript'>
-        var app = document.getElementById('app');
-        var typewriter = new Typewriter(app, {
-            loop: true
-        });
-        typewriter.typeString('Websites')
-            .pauseFor(200)
-            .deleteAll()
-            .typeString('Apps')
-            .pauseFor(200)
-            .deleteAll()
-            .typeString('Sales Funnels')
-            .pauseFor(200)
-            .deleteAll()
-            .typeString('Landing Pages')
-            .start();
-</script>
-<!---->
-  {% endblock %}
+</article>
+    {% endblock %}
