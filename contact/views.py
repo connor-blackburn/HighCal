@@ -30,7 +30,7 @@ def contact(request):
             context = {
                 'contact_name': contact_name,
                 'contact_email': contact_email,
-                'contact_subject': contact_subject,
+                'contact_subject': contact_subject
                 'form_content': form_content,
             }
             content = template.render(context)
