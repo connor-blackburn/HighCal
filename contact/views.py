@@ -43,6 +43,7 @@ def contact(request):
                 headers = {'Reply-To': contact_email }
             )
             email.send()
+            messages.success(request, 'Message Sent Successfully!')
             return redirect('contact')
 
     return render(request, 'contact.html', {
