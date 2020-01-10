@@ -26,6 +26,8 @@ from search_product import urls as urls_search_product
 from search_blog import urls as urls_search_blog
 from reviews import urls as urls_reviews
 from reviews.views import all_reviews
+from contact.views import contact
+from contact import urls as urls_contact
 from checkout import urls as urls_checkout
 from django.views.generic import RedirectView
 from django.views.static import serve
@@ -36,6 +38,7 @@ urlpatterns = [
     url(r'^$', index, name='index'),
     url(r'^accounts/', include(accounts_urls)),
     url(r'^products/', include(urls_products)),
+    url(r'^contact/', include(urls_contact)),
     url(r'^portfolio/', include(urls_portfolio)),
     url(r'^reviews/', include('reviews.urls')),
     url(r'^reviews/', include(urls_reviews)),
