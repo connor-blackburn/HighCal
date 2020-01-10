@@ -40,7 +40,7 @@ def contact(request):
                 "New contact form submission",
                 content,
                 "HighCal" +'',
-                ['djangoemailtest98@gmail.com'],
+                ['djangotestemail98@gmail.com'],
                 headers = {'Reply-To': contact_email }
             )
             email.send()
