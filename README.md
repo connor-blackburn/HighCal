@@ -14,7 +14,7 @@ The full stack website was made possible written in the python-based web framewo
 
 For any project to be considered successful, it must cater for those who most need it. Understanding the target audience for the project was a must, but more importantly; I needed to understand why they would use the site and what problems they needed solving.
 
-Before embarking on the project; I wrote down who exactly would be using the site and why. Along with several UX wireframes which can be seen here.
+Before embarking on the project, I wrote down who exactly would be using the site and why. Along with several UX mockups which can be seen within the mockups directory of the project.
 
 1. An individual or business interesting in becoming a client.
 
@@ -86,7 +86,7 @@ Below I have listed the user stories I wrote before embarking on the project. It
 4. Expanded post page for full viewing of specific post.
    * Once a user has found a desired post, a button will direct them to a blog detail page which will render the full blog post and all relevant details. 
 
-5. Review section showing all reviews
+5. Review section showing all reviews.
    * The review sections, like the blog section will render all reviews with shortened content so the user can browse quickly and easily. A user can sort reviews in relation to upvotes and oldest / newest reviews.
 
 6. Expanded review section showing full review.
@@ -101,14 +101,14 @@ Below I have listed the user stories I wrote before embarking on the project. It
 9. Cart and checkout functionality.
    * Allows authenticated users to purchase products. Users are made aware of this when visiting merchandise store.
 
-10. Responsive and clean design
-   * Responsive design means the whole site looks good and provides a positive user experience on all screen sizes and devices.
+10. Responsive and clean design.
+    * Responsive design means the whole site looks good and provides a positive user experience on all screen sizes and devices.
 
 11.	Portfolio Page showing previous work with link to live site.
-   * The portfolio section showcases all previous work with a button linking a user to the working live site so they can fully understand and experience the work quality of the company.
+    * The portfolio section showcases all previous work with a button linking a user to the working live site so they can fully understand and experience the work quality of the company.
 
-12. Contact functionality
-   * A user can fill out of the contact form which sends the company an email directly and will start communication between potential client and business.
+12. Contact functionality.
+    * A user can fill out of the contact form which sends the company an email directly and will start communication between potential client and business.
 
 ## Future Feature Ideas
 
@@ -152,9 +152,9 @@ Along with the automatic Travis testing (outcome placed at top of file), manual 
 
 1. Users can successfully create a new account.
 2. Users can then log into the new account using either the username or email along with password.
-3. Users can log out and complete all authentication methods
-4. All buttons and links throughout the site direct to the correct pages
-5. Main navigation points to every area of the site successfully
+3. Users can log out and complete all authentication methods.
+4. All buttons and links throughout the site direct to the correct pages.
+5. Main navigation points to every area of the site successfully.
 6. Authenticated user can add products to cart and purchase a product successfully using test card credentials.
    * Card test details
    * Card Number : 4242 4242 4242 4242
@@ -162,7 +162,7 @@ Along with the automatic Travis testing (outcome placed at top of file), manual 
    * Month / Year: Any Acceptable Expiry Date.
 7. The project remains responsive and consistent regardless of device size.
 8. Reviews can be submitted and posted to the site by authenticated users.
-9. Users can search for products based on product title
+9. Users can search for products based on product title.
 10. Users can search for blog posts based on post title.
 11. Users can filter reviews based on upvotes and creation date.
 12. user can apply upvotes to reviews.
