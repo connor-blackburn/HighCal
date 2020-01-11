@@ -1,0 +1,956 @@
+/* ----------------------------------------------------------------------------------------
+                                 1. Universsl Styling
+ --------------------------------------------------------------------------------------- */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+/* ----------------------------------------------------------------------------------------
+                                 2. Navigation Styling
+ --------------------------------------------------------------------------------------- */
+
+nav {
+    font-family: 'Montserrat';
+    margin-bottom: -20px;
+}
+
+@media (max-width: 425px) {
+    .navbar-brand {
+        display: none;
+    }
+}
+/* ----------------------------------------------------------------------------------------
+                                 3. Form Styling
+ --------------------------------------------------------------------------------------- */
+
+form {
+    width: 50%;
+} 
+
+@media (max-width: 320px) {
+    form {
+        width: 100%;
+    }
+    
+    #login_page p {
+            text-align: center;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    form {
+        width: 100%;
+    }
+    
+    #login_page p {
+            text-align: center;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    form {
+        width: 100%;
+    }
+    
+    #login_page p {
+            text-align: center;
+    }
+}
+
+
+
+/* ----------------------------------------------------------------------------------------
+                                 4. Blog Page
+ --------------------------------------------------------------------------------------- */
+
+ #blog {
+    font-family: 'Montserrat';
+    padding: 3%;
+    width: 80%;
+    margin: 0 auto;
+ }
+
+ #blog .author_img {
+    margin-top: 25%;
+    display: block;
+}
+
+#blog .img-circle{
+    width:150px;
+    height: 150px; 
+}
+
+.blog_content p {
+    font-size: 0.8em;
+}
+.blog_content img {
+    object-fit: cover;
+    max-height: 300px;
+    max-width: 700px;
+}
+
+@media (max-width: 320px) {
+    #blog {
+        text-align: center;
+    }
+    .blog_content img {
+        max-width: 230px;
+    }
+
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    #blog {
+        text-align: center;
+    }
+    .blog_content img {
+        max-width: 230px;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    #blog {
+        text-align: center;
+    }
+    .blog_content img {
+        max-width: 230px;
+    }
+}
+/* ----------------------------------------------------------------------------------------
+                                 5. Blog Post Expand Page
+ --------------------------------------------------------------------------------------- */
+#blog_detail {
+    padding: 3%;
+    font-family: 'Montserrat';
+}
+
+#blog_detail h1 {
+    font-size: 4em;
+}
+
+#blog_detail .img-circle {
+    width:150px;
+    height: 150px; 
+}
+
+#blog_detail .img-author_img {
+    display: block;
+}
+
+#blog_detail .img-fluid {
+    margin: 3%;
+}
+
+
+@media (max-width: 320px) {
+    #blog_detail {
+        text-align: center;
+    }
+    .blog_content img {
+        max-width: 230px;
+    }
+    #blog_detail h1 {
+    font-size: 3em;
+    }
+    #blog_detail h5 {
+    font-size: 0.9em;
+    }
+
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    #blog_detail {
+        text-align: center;
+    }
+    .blog_content img {
+        max-width: 230px;
+    }
+    #blog_detail h1 {
+    font-size: 3em;
+}
+    #blog_detail h5 {
+    font-size: 0.9em;
+    }   
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    #blog_detail {
+        text-align: center;
+    }
+    .blog_content img {
+        max-width: 230px;
+    }
+    #blog_detail h1 {
+    font-size: 3em;
+    }
+    #blog_detail h5 {
+    font-size: 0.9em;
+    }
+}
+/* ----------------------------------------------------------------------------------------
+                                 6. Merchandise Page
+ --------------------------------------------------------------------------------------- */
+
+ #shop {
+    font-family: 'Montserrat';
+    padding: 3%;
+    width: 80%;
+    margin: 0 auto;
+ }
+
+ #shop .card {
+     margin: 1% auto;
+ }
+
+ @media (max-width: 320px) {
+    #shop {
+            text-align: center;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    #shop {
+            text-align: center;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    #shop {
+            text-align: center;
+    }
+}
+
+/* ----------------------------------------------------------------------------------------
+                                 6. Index Page + Hero Section
+ --------------------------------------------------------------------------------------- */
+#index {
+    font-family: 'Montserrat';
+}
+
+.hero_image {
+    position: relative;
+    left: 55%;
+    bottom: 120%;
+}
+
+.hero_image img {
+    height: 600px;
+    width: 600px;
+}
+
+.hero_section {
+    padding: 3%;
+    background-image: linear-gradient(to bottom, #f8f9fa, #d8f1ff, #adecff, #76e7fb, #12e2eb);
+    height: 40vh;
+    }
+
+.hero_section h1 {
+    font-size: 5.5em;
+    line-height: 1.5;
+}
+
+.hero_section h3 {
+    font-size: 2.75em;
+}
+
+@media (max-width: 320px) {
+    .hero_image {
+        position: relative;
+        right: 20%;
+        bottom: 5%;
+        top: 15%;
+        left: 2%;
+    }
+
+    .hero_image img {
+        height: 190px;
+        width: 190px;
+    }
+
+    .hero_section {
+        text-align: center;
+        padding: 3%;
+        background-image: linear-gradient(to bottom, #f8f9fa, #d8f1ff, #adecff, #76e7fb, #12e2eb);
+        height: 60vh;
+        }
+
+    .hero_section h1 {
+        font-size: 2.3em;
+        line-height: 2;
+    }
+
+    .hero_section h3 {
+        font-size: 1.15em;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+       .hero_image {
+        position: relative;
+        right: 20%;
+        bottom: 5%;
+        top: 13%;
+        left: 2%;
+    }
+
+    .hero_image img {
+        height: 240px;
+        width: 240px;
+    }
+
+    .hero_section {
+        text-align: center;
+        padding: 3%;
+        background-image: linear-gradient(to bottom, #f8f9fa, #d8f1ff, #adecff, #76e7fb, #12e2eb);
+        height: 60vh;
+        }
+
+    .hero_section .heading {
+        margin-top: -2%;
+    }
+    .hero_section h1 {
+        font-size: 2.3em;
+        line-height: 2;
+    }
+
+    .hero_section h3 {
+        font-size: 1.15em;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    .hero_section {
+        text-align: center;
+        padding: 3%;
+        background-image: linear-gradient(to bottom, #f8f9fa, #d8f1ff, #adecff, #76e7fb, #12e2eb);
+        height: 60vh;
+        }
+
+     .hero_image {
+        position: relative;
+        right: 20%;
+        bottom: 5%;
+        top: 13%;
+        left: 2%;
+    }
+
+    .hero_image img {
+        height: 250px;
+        width: 250px;
+    }
+
+    .hero_section .heading {
+        margin-top: -2%;
+    }
+    .hero_section h1 {
+        font-size: 2.3em;
+        line-height: 2;
+    }
+
+    .hero_section h3 {
+        font-size: 1.15em;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    .hero_section {
+        text-align: center;
+        padding: 3%;
+        background-image: linear-gradient(to bottom, #f8f9fa, #d8f1ff, #adecff, #76e7fb, #12e2eb);
+        height: 60vh;
+        }
+
+     .hero_image {
+        position: relative;
+        right: 20%;
+        bottom: 5%;
+        top: 13%;
+        left: 2%;
+    }
+
+    .hero_image img {
+        height: 250px;
+        width: 250px;
+    }
+    .hero_section h1 {
+        font-size: 2.3em;
+        line-height: 2;
+    }
+
+    .hero_section h3 {
+        font-size: 1.15em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+     .hero_section {
+        text-align: center;
+        padding: 3%;
+        background-image: linear-gradient(to bottom, #f8f9fa, #d8f1ff, #adecff, #76e7fb, #12e2eb);
+        height: 60vh;
+        }
+
+     .hero_image {
+        position: relative;
+        right: 20%;
+        bottom: 5%;
+        top: 13%;
+        left: 2%;
+    }
+
+    .hero_image img {
+        height: 250px;
+        width: 250px;
+    }
+    .hero_section h1 {
+        font-size: 4.3em;
+        line-height: 2;
+    }
+
+    .hero_section h3 {
+        font-size: 2.15em;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .hero_section {
+        text-align: center;
+        padding: 3%;
+        background-image: linear-gradient(to bottom, #f8f9fa, #d8f1ff, #adecff, #76e7fb, #12e2eb);
+        height: 60vh;
+        }
+
+     .hero_image {
+        position: relative;
+        right: 20%;
+        bottom: 5%;
+        top: 13%;
+        left: 2%;
+    }
+
+    .hero_image img {
+        height: 330px;
+        width: 330px;
+    }
+    .hero_section h1 {
+        font-size: 4.3em;
+        line-height: 2;
+    }
+
+    .hero_section h3 {
+        font-size: 2.15em;
+    }
+}
+
+
+/* ----------------------------------------------------------------------------------------
+                                 7. Why Us Section / Index.html
+ --------------------------------------------------------------------------------------- */
+#why_us {
+    font-family: 'Montserrat';
+    padding: 3%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.why_icons {
+    padding: 5%;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.why_us i {
+    margin: 10px;
+       color: #a39291;
+}
+
+@media (max-width: 320px) {
+    .why_us i {
+        font-size: 6em;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    .why_us i {
+        font-size: 6em;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    .why_us i {
+        font-size: 6em;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    .why_us i {
+        font-size: 6em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .why_us i {
+        font-size: 6em;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .why_us i {
+        font-size: 6em;
+    }
+}
+
+@media (min-width: 1441px) {
+   .why_us i {
+        font-size: 6em;
+    } 
+}
+
+/* ----------------------------------------------------------------------------------------
+                                 8. Portfolio Section / Index.html
+ --------------------------------------------------------------------------------------- */
+ #portfolio_index {
+    background-color: #8E8E8E;
+    padding: 3%;
+    -webkit-clip-path: polygon(50% 6%, 100% 0, 100% 100%, 0 100%, 0 0);
+    clip-path: polygon(50% 6%, 100% 0, 100% 100%, 0 100%, 0 0);
+ }
+
+#portfolio_index hr {
+    background-color: #fff;
+}
+
+#portfolio_index .header {
+    color: #fff;
+}
+
+ #portfolio_index .row {
+     padding: 5%;
+ }
+
+ #portfolio_index .card {
+     margin: 5% auto;
+ }
+
+.portfolio_index_container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media (max-width: 320px) {
+    #portfolio_index {
+        text-align: center;
+    }
+
+    #portfolio_index .header {
+        padding-top: 20%;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    #portfolio_index {
+        text-align: center;
+    }
+
+    #portfolio_index .header {
+        padding-top: 20%;
+    }
+}
+@media (min-width: 376px) and (max-width: 425px) {
+    #portfolio_index {
+        text-align: center;
+    }
+
+    #portfolio_index .header {
+        padding-top: 20%;
+    }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+    #portfolio_index {
+        text-align: center;
+        height: 115vh;
+    }
+
+    #portfolio_index .header {
+    padding-top: 10%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #portfolio_index {
+        text-align: center;
+        height: 130vh;
+    }
+
+    #portfolio_index .header {
+    padding-top: 10%;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    #portfolio_index {
+        text-align: center;
+        height: 153vh;
+    }
+
+    #portfolio_index .header {
+    padding-top: 10%;
+    }
+}
+
+@media (min-width: 1441px) {
+    #portfolio_index {
+        text-align: center;
+        height: 153vh;
+    }
+
+    #portfolio_index .header {
+    padding-top: 10%;
+    }
+}
+/* ----------------------------------------------------------------------------------------
+                                 9. Portfolio Page
+ --------------------------------------------------------------------------------------- */
+
+#portfolio_page {
+    font-family: 'Montserrat';
+    padding: 3%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+#portfolio_page .card {
+     margin: 1% auto;
+ }
+
+  @media (max-width: 320px) {
+    #portfolio_page {
+            text-align: center;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    #portfolio_page {
+            text-align: center;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    #portfolio_page {
+            text-align: center;
+    }
+}
+
+ /* ----------------------------------------------------------------------------------------
+                                 10. Review Page
+ --------------------------------------------------------------------------------------- */
+
+#reviews {
+    font-family: 'Montserrat';
+    padding: 3%;
+    width: 80%;
+    margin: 0 auto;
+ }
+
+ #reviews .card {
+     margin: 2% 1%;
+ }
+
+@media (max-width: 320px) {
+    #reviews {
+        text-align: center;
+    }
+
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    #reviews {
+        text-align: center;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    #reviews {
+        text-align: center;
+    }
+}
+
+  /* ----------------------------------------------------------------------------------------
+                                 11. Review Form Page
+ --------------------------------------------------------------------------------------- */
+
+ #review_form {
+    font-family: 'Montserrat';
+    padding: 3%;
+    width: 80%;
+    margin: 0 auto;
+ }
+
+@media (max-width: 320px) {
+    #review_form {
+        text-align: center;
+    }
+     h1 {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    #review_form {
+        text-align: center;
+    } 
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    #review_form {
+        text-align: center;
+    }
+     h1 {
+        font-size: 1.5rem;
+    }
+}
+
+ /* ----------------------------------------------------------------------------------------
+                                 11. Review Detail Page
+ --------------------------------------------------------------------------------------- */
+
+ #review_detail {
+    font-family: 'Montserrat';
+    padding: 3%;
+    width: 80%;
+    margin: 0 auto;
+ }
+
+ #review_detail form {
+     text-align: center;
+ }
+
+ #review_detail img {
+     border: 1px solid black;
+     width: 80%;
+     margin-bottom: 2%;
+ }
+
+ #review_detail .review_votes {
+     margin: 0 auto;
+ }
+
+ .review_votes form{
+     margin: 0 auto;
+     text-align: center;
+ }
+
+@media (max-width: 320px) {
+    #review_detail {
+        text-align: center;
+    }
+    .review_detail_content h2 {
+        font-size: 130%;
+    }
+    .review_detail_content h5 {
+        font-size: 85%
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    #review_detail {
+        text-align: center;
+    }
+    .review_detail_content h2 {
+        font-size: 130%;
+    }
+    .review_detail_content h5 {
+        font-size: 85%
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    #review_detail {
+        text-align: center;
+    }
+}
+
+ /* ----------------------------------------------------------------------------------------
+                                 12. Merchandise Section / Index.html
+ --------------------------------------------------------------------------------------- */
+
+ #merchandise_section {
+    font-family: 'Montserrat';
+    padding: 3%;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+ }
+ 
+ #merchandise_section .card {
+    margin: 5% auto;
+ }
+
+/* ----------------------------------------------------------------------------------------
+                                 13. Blog Section / Index.html
+ --------------------------------------------------------------------------------------- */
+
+#blog_section {
+    font-family: 'Montserrat';
+    padding: 3%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #8e8e8e;
+}
+
+#blog_section hr {
+    background-color: #fff;
+}
+
+#blog_section .header {
+    color: #fff;
+}
+
+#blog_section .card {
+    margin: 0 auto;
+}
+
+#blog_section .card img {
+    object-fit: cover;
+    max-height: 250px;
+    max-width: 700px;
+}
+
+#blog_section a {
+    color: #fff;
+}  
+
+/* ----------------------------------------------------------------------------------------
+                                 14. Registration Page
+ --------------------------------------------------------------------------------------- */
+#reg_page {
+    font-family: 'Montserrat';
+    padding: 3%;
+    width: 80%;
+    margin: 0 auto;
+}
+ /* ----------------------------------------------------------------------------------------
+                                 15. Login Page
+ --------------------------------------------------------------------------------------- */
+ #login_page {
+    font-family: 'Montserrat';
+    padding: 3%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* ----------------------------------------------------------------------------------------
+                                 16. Profile Page
+ --------------------------------------------------------------------------------------- */
+#profile {
+    font-family: 'Montserrat';
+    padding: 3%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media (max-width: 320px) {
+    #profile {
+            text-align: center;
+            width: 100%;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    #profile {
+            text-align: center;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    #profile {
+            text-align: center;
+    }
+}
+
+/* ----------------------------------------------------------------------------------------
+                                 17. Cart Page
+ --------------------------------------------------------------------------------------- */
+#cart {
+    font-family: 'Montserrat';
+    padding: 3%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* ----------------------------------------------------------------------------------------
+                                 18. Checkout Page
+ --------------------------------------------------------------------------------------- */
+#checkout {
+    font-family: 'Montserrat';
+    padding: 3%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.checkout {
+    font-family: 'Montserrat';
+    padding: 3%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media (max-width: 320px) {
+    #checkout {
+        text-align: center;
+        width: 100%;
+    }
+    .checkout {
+        text-align: center;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    #checkout {
+        text-align: center;
+    }
+    .checkout {
+        text-align: center;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+     #checkout {
+        text-align: center;
+    }
+    .checkout {
+        text-align: center;
+    }
+}
+
+/* ----------------------------------------------------------------------------------------
+                                 19. Contact Form Page
+ --------------------------------------------------------------------------------------- */
+#contact_form {
+    font-family: 'Montserrat';
+    padding: 3%;
+    width: 80%;
+    margin: 0 auto;
+}
+/* ----------------------------------------------------------------------------------------
+                                 20. Password Reset Page
+ --------------------------------------------------------------------------------------- */
+#password_reset {
+    font-family: 'Montserrat';
+    padding: 3%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media (max-width: 425px) {
+   #password_reset {
+    text-align: center;
+   }
+}
